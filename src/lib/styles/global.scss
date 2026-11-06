@@ -44,6 +44,20 @@ body {
 	width: 100vw;
 	overflow-y: hidden;
 }
+
+.alkesItalic {
+	font-family: AlkesItalic;
+}
+.alkesLightItalic {
+	font-family: AlkesLightItalic;
+}
+.alkesRegular {
+	font-family: AlkesRegular;
+}
+.alkesLight {
+	font-family: AlkesLight;
+}
+
 // full browser window
 .container {
 	display: flex;
