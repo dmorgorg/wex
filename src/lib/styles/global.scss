@@ -1,0 +1,170 @@
+:root {
+	--bg: #fff;
+
+	--light-grey: #eee;
+	--grey-primary: #ccc;
+	--grey-main: #aaa;
+	--grey-dark: #555;
+	--off-black: #333;
+
+	--math-primary: #0a0;
+	--math-hover: #0c0;
+	--math-white: #edefed;
+
+	--statics-primary: #a00;
+	--statics-hover: #c00;
+	--statics-white: #efeded;
+
+	--fluids-primary: #0aa;
+	--fluids-hover: #0cc;
+	--fluids-white: #edefef;
+}
+
+html {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	font-size: 3.25vw;
+	font-weight: 400;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow-y: hidden;
+}
+// full browser window
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+header {
+	align-items: center;
+	border-bottom: 0.25rem solid black;
+	color: black;
+	display: flex;
+	font-family: alkesItalic;
+	justify-content: space-between;
+	overflow-y: hidden;
+	padding: 0.75rem 1rem;
+	width: 100vw;
+
+	h3 {
+		letter-spacing: 0.03125em;
+		margin-block: 0;
+		padding-block: 0;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.left {
+		margin-right: 2rem;
+	}
+	.right {
+		text-align: right;
+	}
+
+	&.home {
+		background-color: var(--grey-primary);
+	}
+	&.math {
+		background-color: var(--math-primary);
+	}
+	&.statics {
+		background-color: var(--statics-primary);
+	}
+	&.fluids {
+		background-color: var(--fluids-primary);
+	}
+}
+
+main {
+	flex: 1;
+	min-height: 0;
+	overflow-y: auto;
+}
+
+.math {
+	color: var(--math-primary);
+}
+.fluids {
+	color: var(--fluids-primary);
+}
+.statics {
+	color: var(--statics-primary);
+}
+
+.alkesItalic {
+	font-family: AlkesItalic;
+}
+.alkesLightItalic {
+	font-family: AlkesLightItalic;
+}
+.alkesRegular {
+	font-family: AlkesRegular;
+}
+.alkesLight {
+	font-family: AlkesLight;
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+// @media (max-width: 512px) {
+// 	::-webkit-scrollbar {
+// 		display: none;
+// 	}
+// }
+@media (min-width: 512px) {
+	html {
+		font-size: 3vwvw;
+	}
+	main {
+		padding: 1em 4em;
+	}
+	// width //
+	::-webkit-scrollbar {
+		width: 16px;
+	}
+	//  Track
+	::-webkit-scrollbar-track {
+		background: var(--primary-grey);
+		width: 16px;
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 2.5vw;
+	}
+	main {
+		padding: 1em 6em;
+	}
+}
+@media (min-width: 1024px) {
+	html {
+		font-size: 2vw;
+	}
+	main {
+		// padding: 10em 5em;
+		// background: lime;
+	}
+}
