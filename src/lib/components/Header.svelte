@@ -1,7 +1,7 @@
 <script>
-	let { topMatter } = $props();
-	let tm = $derived(topMatter);
-	import '$lib/styles/fonts.css';
+	let { topMatter } = $props()
+	let tm = $derived(topMatter)
+	import '#lib/styles/fonts.css'
 </script>
 
 <header class={topMatter.theme}>
