@@ -2,6 +2,7 @@
 	let { topMatter } = $props()
 	let tm = $derived(topMatter)
 	import '#lib/styles/fonts.css'
+	import '#lib/styles/global.css'
 </script>
 
 <header class={topMatter.theme}>

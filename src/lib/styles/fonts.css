@@ -3,10 +3,6 @@
 	src: url(#lib/fonts/Colastine.otf) format('opentype');
 }
 @font-face {
-	font-family: 'sunshineSurprise';
-	src: url(#lib/fonts/SunshineSurprise.ttf) format('truetype');
-}
-@font-face {
 	font-family: 'syabi';
 	src: url(#lib/fonts/Syabi.otf) format('truetype');
 }
