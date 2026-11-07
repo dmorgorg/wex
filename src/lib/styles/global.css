@@ -38,23 +38,7 @@ body {
 	padding: 0;
 	height: 100vh;
 	width: 100vw;
-	overflow-y: hidden;
-}
-
-.alkesItalic {
-	font-family: AlkesItalic;
-}
-
-.alkesLightItalic {
-	font-family: AlkesLightItalic;
-}
-
-.alkesRegular {
-	font-family: AlkesRegular;
-}
-
-.alkesLight {
-	font-family: AlkesLight;
+	/* overflow-y: hidden; */
 }
 
 .container {
@@ -123,9 +107,25 @@ main {
 	color: var(--statics-primary);
 }
 
+.alkesItalic {
+	font-family: AlkesItalic;
+}
+
+.alkesLightItalic {
+	font-family: AlkesLightItalic;
+}
+
+.alkesRegular {
+	font-family: AlkesRegular;
+}
+
+.alkesLight {
+	font-family: AlkesLight;
+}
+
 @media (min-width: 512px) {
 	html {
-		font-size: 3vwvw;
+		font-size: 3vw;
 	}
 	main {
 		padding: 1em 4em;

@@ -20,7 +20,7 @@
 							<li>
 								Limits
 								<!-- <a href="/math/calculus/limits">Limits</a> -->
-								<ul>
+								<ol>
 									<li class="inline">
 										<a href="/math/calculus/limits/01basic">Basic Limits</a> &mdash;
 									</li>
@@ -52,7 +52,7 @@
 									<li class="inline">
 										<a href="/math/calculus/limits/10multi">Multivariable Limits</a>
 									</li>
-								</ul>
+								</ol>
 							</li>
 							<li><a href="/math/calculus/differentiation"><strike>Differentiation</strike></a></li>
 							<li><a href="/math/calculus/integration"><strike>Integration</strike></a></li>
