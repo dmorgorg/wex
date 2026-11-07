@@ -136,7 +136,7 @@
 
 		ul,
 		ol {
-			font-size: 85%;
+			font-size: 90%;
 		}
 	}
 </style>
