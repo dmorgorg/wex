@@ -146,7 +146,7 @@ main::-webkit-scrollbar-thumb {
 }
 
 body {
-  font-size: clamp(15px, 6vw, 30px);
+  font-size: clamp(0px, 5vw, 90px);
 }
 body main {
   padding: 1em;
