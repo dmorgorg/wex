@@ -133,9 +133,10 @@
 	ul,
 	ol {
 		margin-block: 0;
+
 		ul,
 		ol {
-			font-size: 85%;
+			font-size: 82.5%;
 		}
 	}
 </style>

@@ -23,7 +23,7 @@
 html {
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
-	font-size: 3.25vw;
+	// font-size: 3.25vw;
 	font-weight: 400;
 	height: 100vh;
 	margin: 0;
@@ -129,7 +129,7 @@ main {
 	flex: 1;
 	min-height: 0;
 	overflow-y: auto;
-	padding-inline: 15%;
+	// padding-inline: 15%;
 	scrollbar-color: var(--scrollbar-thumb, var(--grey-dark)) var(--light-grey);
 	scrollbar-gutter: stable;
 
@@ -158,14 +158,21 @@ main {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// @media (max-width: 512px) {
-// 	::-webkit-scrollbar {
-// 		display: none;
-// 	}
-// }
+body {
+	font-size: clamp(15px, 6vw, 30px);
+	main {
+		padding: 1em;
+	}
+}
+
+/* @media (max-width: 512px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
 @media (min-width: 512px) {
 	html {
-		font-size: 3vwvw;
+		font-size: 3vw;
 	}
 	main {
 		padding: 1em 4em;
@@ -186,6 +193,7 @@ main {
 	}
 	main {
 		padding: 1em 6em;
+		background: yellow;
 	}
 }
 @media (min-width: 1024px) {
@@ -193,7 +201,7 @@ main {
 		font-size: 2vw;
 	}
 	main {
-		// padding: 10em 5em;
-		// background: lime;
+		padding: 10em 5em;
+		background: lime;
 	}
-}
+} */
