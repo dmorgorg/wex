@@ -63,16 +63,29 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+
+	&.home {
+		--scrollbar-thumb: var(--grey-primary);
+	}
+	&.math {
+		--scrollbar-thumb: var(--math-primary);
+	}
+	&.statics {
+		--scrollbar-thumb: var(--statics-primary);
+	}
+	&.fluids {
+		--scrollbar-thumb: var(--fluids-primary);
+	}
 }
 
 header {
 	align-items: center;
-	border-bottom: 0.25rem solid black;
+	border-bottom: 0.125rem solid black;
 	display: flex;
 	font-family: AlkesItalic;
 	justify-content: space-between;
 	overflow-y: hidden;
-	padding: 0.75rem 1rem;
+	padding: 0.25rem 1rem;
 	width: 100vw;
 
 	h3 {
@@ -116,6 +129,21 @@ main {
 	flex: 1;
 	min-height: 0;
 	overflow-y: auto;
+	padding-inline: 15%;
+	scrollbar-color: var(--scrollbar-thumb, var(--grey-dark)) var(--light-grey);
+	scrollbar-gutter: stable;
+
+	&::-webkit-scrollbar {
+		width: 16px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: var(--light-grey);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: var(--scrollbar-thumb, var(--grey-dark));
+	}
 }
 
 .math {

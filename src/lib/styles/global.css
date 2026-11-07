@@ -62,15 +62,27 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+.container.home {
+  --scrollbar-thumb: var(--grey-primary);
+}
+.container.math {
+  --scrollbar-thumb: var(--math-primary);
+}
+.container.statics {
+  --scrollbar-thumb: var(--statics-primary);
+}
+.container.fluids {
+  --scrollbar-thumb: var(--fluids-primary);
+}
 
 header {
   align-items: center;
-  border-bottom: 0.25rem solid black;
+  border-bottom: 0.125rem solid black;
   display: flex;
   font-family: AlkesItalic;
   justify-content: space-between;
   overflow-y: hidden;
-  padding: 0.75rem 1rem;
+  padding: 0.25rem 1rem;
   width: 100vw;
 }
 header h3 {
@@ -109,6 +121,18 @@ main {
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  padding-inline: 15%;
+  scrollbar-color: var(--scrollbar-thumb, var(--grey-dark)) var(--light-grey);
+  scrollbar-gutter: stable;
+}
+main::-webkit-scrollbar {
+  width: 16px;
+}
+main::-webkit-scrollbar-track {
+  background: var(--light-grey);
+}
+main::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb, var(--grey-dark));
 }
 
 .math {

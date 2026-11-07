@@ -9,4 +9,13 @@
 
 <div class="container {topMatter.theme}">
 	<Header {topMatter} />
+	<main>
+		<h1>Basic Limits</h1>
+		{#each Array(10) as _, i}
+			<p>
+				Placeholder {i + 1}: This is temporary text for testing the scrollbar on the basic
+				limits page.
+			</p>
+		{/each}
+	</main>
 </div>
