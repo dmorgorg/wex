@@ -90,6 +90,7 @@ header {
 
 	h3 {
 		color: black;
+		font-size: clamp(15px, 5vw, 20px);
 		letter-spacing: 0.03125em;
 		margin-block: 0;
 		padding-block: 0;
