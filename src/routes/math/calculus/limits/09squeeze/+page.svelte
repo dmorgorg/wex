@@ -9,5 +9,5 @@
 </script>
 
 <div class="container {topMatter.theme}">
-	<header><Header {topMatter} /></header>
+	<Header {topMatter} />
 </div>
