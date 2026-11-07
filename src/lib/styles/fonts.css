@@ -1,40 +1,40 @@
 @font-face {
 	font-family: 'colastine';
-	src: url(#lib/fonts/Colastine.otf) format('opentype');
+	src: url(../fonts/Colastine.otf) format('opentype');
 }
 @font-face {
 	font-family: 'syabi';
-	src: url(#lib/fonts/Syabi.otf) format('truetype');
+	src: url(../fonts/Syabi.otf) format('truetype');
 }
 @font-face {
 	font-family: 'ETitalic';
-	src: url(#lib/fonts/ETBookItalic.ttf) format('truetype');
+	src: url(../fonts/ETBookItalic.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'ETbold';
-	src: url(#lib/fonts/ETBookBold.ttf) format('truetype');
+	src: url(../fonts/ETBookBold.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'ETroman';
-	src: url(#lib/fonts/ETBookRoman.ttf) format('truetype');
+	src: url(../fonts/ETBookRoman.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'ETromanLine';
-	src: url(#lib/fonts/ETBookRomanLine.ttf) format('truetype');
+	src: url(../fonts/ETBookRomanLine.ttf) format('truetype');
 }
 @font-face {
 	font-family: 'AlkesLightItalic';
-	src: url(#lib/fonts/AlkesLightIt.TTF) format('truetype');
+	src: url(../fonts/AlkesLightIt.TTF) format('truetype');
 }
 @font-face {
 	font-family: 'AlkesItalic';
-	src: url(#lib/fonts/AlkesRgIt.TTF) format('truetype');
+	src: url(../fonts/AlkesRgIt.TTF) format('truetype');
 }
 @font-face {
 	font-family: 'AlkesRegular';
-	src: url(#lib/fonts/AlkesRegular.TTF) format('truetype');
+	src: url(../fonts/AlkesRegular.TTF) format('truetype');
 }
 @font-face {
 	font-family: 'AlkesLight';
-	src: url(#lib/fonts/AlkesLight.TTF) format('truetype');
+	src: url(../fonts/AlkesLight.TTF) format('truetype');
 }
