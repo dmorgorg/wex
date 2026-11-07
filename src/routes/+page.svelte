@@ -79,7 +79,7 @@
 			}
 		}
 		ul {
-			font-size: 125%;
+			font-size: 100%;
 			list-style-type: none;
 			padding-left: 0;
 
@@ -136,7 +136,7 @@
 
 		ul,
 		ol {
-			font-size: 82.5%;
+			font-size: 85%;
 		}
 	}
 </style>
