@@ -26,6 +26,7 @@ html {
 	// font-size: 3.25vw;
 	font-weight: 400;
 	height: 100vh;
+	height: 100dvh;
 	margin: 0;
 	padding: 0;
 	width: 100vw;
@@ -41,6 +42,7 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
+	height: 100dvh;
 	width: 100vw;
 	overflow-y: hidden;
 }
@@ -63,6 +65,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	height: 100dvh;
 
 	&.home {
 		--scrollbar-thumb: var(--grey-primary);
