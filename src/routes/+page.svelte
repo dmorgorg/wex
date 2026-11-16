@@ -155,15 +155,11 @@
 	main {
 		font-size: 1.25em;
 		ol {
-			/* list-style-type: decimal;
-			list-style-type: upper-alpha; */
 			counter-reset: outer-list; /* limits, differentiation,... */
-			/* counter-set: outer-list 1; */
 			padding-left: 2.5rem;
 
 			ol {
 				counter-reset: inline-list;
-				/* counter-increment: outer-list; */
 				padding-left: 0rem;
 			}
 
