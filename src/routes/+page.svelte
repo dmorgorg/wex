@@ -224,7 +224,7 @@
 
 		ul,
 		ol {
-			font-size: 90%;
+			font-size: 95%;
 		}
 	}
 </style>
