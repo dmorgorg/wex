@@ -153,7 +153,6 @@
 
 <style lang="scss">
 	main {
-		font-size: 1.25em;
 		ol {
 			counter-reset: outer-list; /* limits, differentiation,... */
 			padding-left: 2.5rem;
@@ -168,7 +167,6 @@
 			}
 		}
 		ul {
-			font-size: 100%;
 			list-style-type: none;
 			padding-left: 0;
 

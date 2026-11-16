@@ -23,7 +23,7 @@
 html {
 	box-sizing: border-box;
 	font-family: Arial, sans-serif;
-	// font-size: 3.25vw;
+	font-size: 13.25vw;
 	font-weight: 400;
 	/* height: 100vh; */
 	height: 100dvh;
@@ -93,7 +93,6 @@ header {
 
 	h3 {
 		color: black;
-		/* font-size: clamp(15px, 2vw, 20px); */
 		letter-spacing: 0.03125em;
 		margin-block: 0;
 		padding-block: 0;
@@ -164,24 +163,18 @@ main {
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 body {
-	/* container {
-		padding-bottom: 2em;
-		margin-bottom: 4em;
-	} */
 	main {
 		padding: 1em;
-		/* padding-bottom: 4em;
-		margin-bottom: 4em; */
 		border: 1px solid green;
 	}
 }
 
-/* @media (max-width: 512px) {
+@media (max-width: 512px) {
 	::-webkit-scrollbar {
 		display: none;
 	}
 }
-@media (min-width: 512px) {
+/*@media (min-width: 512px) {
 	html {
 		font-size: 3vw;
 	}
