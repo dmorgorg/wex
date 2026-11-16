@@ -153,7 +153,7 @@
 
 <style lang="scss">
 	main {
-		font-size: 1.5em;
+		font-size: 1.25em;
 		ol {
 			/* list-style-type: decimal;
 			list-style-type: upper-alpha; */
