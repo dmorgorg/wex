@@ -58,7 +58,7 @@ body {
 	font-family: AlkesLight;
 }
 
-// full browser window
+/* full browser window */
 .container {
 	display: flex;
 	flex-direction: column;
@@ -90,7 +90,7 @@ header {
 
 	h3 {
 		color: black;
-		// font-size: clamp(15px, 2vw, 20px);
+		/* font-size: clamp(15px, 2vw, 20px); */
 		letter-spacing: 0.03125em;
 		margin-block: 0;
 		padding-block: 0;
@@ -131,7 +131,7 @@ main {
 	flex: 1;
 	min-height: 0;
 	overflow-y: auto;
-	// padding-inline: 15%;
+	/* padding-inline: 15%; */
 	scrollbar-color: var(--scrollbar-thumb, var(--grey-dark)) var(--light-grey);
 	scrollbar-gutter: stable;
 

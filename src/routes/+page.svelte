@@ -209,7 +209,7 @@
 			}
 
 			&:not(:last-child)::after {
-				// content: '\00a0\2014';
+				/* content: '\00a0\2014'; */
 				content: '\00a0\00a0\00a0';
 			}
 		}
