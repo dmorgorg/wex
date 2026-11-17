@@ -60,7 +60,6 @@ body {
 .container {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
 	height: 100dvh;
 
 	&.home {
@@ -133,40 +132,22 @@ main {
 	scrollbar-color: var(--scrollbar-thumb) transparent;
 	scrollbar-gutter: stable;
 
-	// &::-webkit-scrollbar-track {
-	// 	background: var(--light-grey);
-	// }
-
-	&::-webkit-scrollbar-thumb {
-		background: var(--scrollbar-thumb, transparent);
+	.math {
+		color: var(--math-primary);
+	}
+	.fluids {
+		color: var(--fluids-primary);
+	}
+	.statics {
+		color: var(--statics-primary);
 	}
 }
 
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-button:vertical,
-::-webkit-scrollbar-button:vertical:decrement,
-::-webkit-scrollbar-button:vertical:increment {
-	display: none !important;
-	width: 0 !important;
-	height: 0 !important;
-	background: transparent !important;
-	border: 0 !important;
+main::-webkit-scrollbar-button {
+	display: none;
 }
-
-@supports selector(::-webkit-scrollbar) {
-	main {
-		scrollbar-color: auto;
-	}
-}
-
-.math {
-	color: var(--math-primary);
-}
-.fluids {
-	color: var(--fluids-primary);
-}
-.statics {
-	color: var(--statics-primary);
+main::-webkit-scrollbar-thumb:hover {
+	background: orange;
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

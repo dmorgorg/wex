@@ -59,7 +59,6 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   height: 100dvh;
 }
 .container.home {
@@ -126,35 +125,22 @@ main {
   scrollbar-color: var(--scrollbar-thumb) transparent;
   scrollbar-gutter: stable;
 }
-main::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb, transparent);
-}
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-button:vertical,
-::-webkit-scrollbar-button:vertical:decrement,
-::-webkit-scrollbar-button:vertical:increment {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-}
-@supports selector(::-webkit-scrollbar) {
-  main {
-    scrollbar-color: auto;
-  }
-}
-
-.math {
+main .math {
   color: var(--math-primary);
 }
-
-.fluids {
+main .fluids {
   color: var(--fluids-primary);
 }
-
-.statics {
+main .statics {
   color: var(--statics-primary);
+}
+
+main::-webkit-scrollbar-button {
+  display: none;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: orange;
 }
 
 @media (max-width: 512px) {
