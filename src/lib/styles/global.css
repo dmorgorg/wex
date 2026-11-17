@@ -7,7 +7,7 @@
   --off-black: #333;
   --math-primary: #0a0;
   --math-hover: #0c0;
-  --math-white: #edefed;
+  --math-white: #fcfffc;
   --statics-primary: #a00;
   --statics-hover: #c00;
   --statics-white: #efeded;
@@ -18,10 +18,7 @@
 
 html {
   box-sizing: border-box;
-  font-size: 3.5vw;
-  font-size: 16px;
-  font-weight: 400;
-  /* height: 100vh; */
+  font-size: 18px;
   height: 100dvh;
   margin: 0;
   padding: 0;
@@ -37,7 +34,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-  /* height: 100vh; */
   height: 100dvh;
   width: 100vw;
   overflow-y: hidden;
@@ -71,6 +67,7 @@ body {
 }
 .container.math {
   --scrollbar-thumb: var(--math-primary);
+  background-color: var(--math-white);
 }
 .container.statics {
   --scrollbar-thumb: var(--statics-primary);
@@ -87,7 +84,7 @@ header {
   justify-content: space-between;
   overflow-y: hidden;
   padding: 0.25rem 1rem;
-  width: 100vw;
+  width: 100dvw;
 }
 header h3 {
   color: black;
@@ -126,17 +123,16 @@ main {
   min-height: 0;
   padding: 1em;
   overflow-y: auto;
-  scrollbar-color: var(--scrollbar-thumb) var(--light-grey);
+  scrollbar-color: var(--scrollbar-thumb) transparent;
   scrollbar-gutter: stable;
 }
-main::-webkit-scrollbar {
-  width: 16px;
-}
-main::-webkit-scrollbar-track {
-  background: var(--light-grey);
-}
 main::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb, var(--grey-dark));
+  background: var(--scrollbar-thumb, transparent);
+}
+main::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .math {
@@ -163,7 +159,7 @@ main::-webkit-scrollbar-thumb {
   main {
     padding: 1em 2em;
     background-color: pink;
-    font-size: 3vw;
+    font-size: 20px;
   }
   ::-webkit-scrollbar {
     width: 16px;
