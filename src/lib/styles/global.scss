@@ -23,7 +23,7 @@
 html {
 	box-sizing: border-box;
 	// font-family: Arial, sans-serif;
-	font-size: 3.25vw;
+	font-size: 3.5vw;
 	font-weight: 400;
 	/* height: 100vh; */
 	height: 100dvh;
@@ -133,8 +133,7 @@ main {
 	min-height: 0;
 	padding: 1em;
 	overflow-y: auto;
-
-	scrollbar-color: var(--scrollbar-thumb, var(--grey-dark)) var(--light-grey);
+	scrollbar-color: var(--scrollbar-thumb) var(--light-grey);
 	scrollbar-gutter: stable;
 
 	&::-webkit-scrollbar {
