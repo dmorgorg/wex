@@ -182,4 +182,40 @@ body {
   ::-webkit-scrollbar {
     display: none;
   }
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 512px) {
+  html {
+    font-size: 20px;
+  }
+  .container main {
+    padding: 1em 3em;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 22px;
+  }
+  .container main {
+    padding: 1em 6em;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 26px;
+  }
+  .container main {
+    padding: 1em 8em;
+  }
+}
+@media (min-width: 1600px) {
+  html {
+    font-size: 30px;
+  }
+  .container main {
+    padding: 1em 10em;
+    background: lime;
+  }
 }/*# sourceMappingURL=global.css.map */

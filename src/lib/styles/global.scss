@@ -115,10 +115,6 @@ body {
 		}
 	}
 
-	// &.home main::-webkit-scrollbar {
-	// 	width: 26px;
-	// }
-
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 	header {
@@ -205,39 +201,40 @@ body {
 	::-webkit-scrollbar {
 		display: none; // fallback for older browsers
 	}
+	html {
+		font-size: 16px;
+	}
 }
-// @media (min-width: 512px) {
-// 	html {
-// 		font-size: 20px;
-// 	}
-// 	main {
-// 		padding: 1em 2em;
-// 	}
-// }
-// @media (min-width: 768px) {
-// 	html {
-// 		font-size: 24px;
-// 	}
-// 	main {
-// 		padding: 1em 16em;
-// 		background: yellow;
-// 	}
-// }
-// @media (min-width: 1024px) {
-// 	html {
-// 		font-size: 24px;
-// 	}
-// 	main {
-// 		padding: 10em 5em;
-// 		// background: lime;
-// 	}
-// }
-// @media (min-width: 1600px) {
-// 	html {
-// 		font-size: 30px;
-// 	}
-// 	main {
-// 		padding: 10em 5em;
-// 		background: lime;
-// 	}
-// }
+@media (min-width: 512px) {
+	html {
+		font-size: 20px;
+	}
+	.container main {
+		padding: 1em 3em;
+	}
+}
+@media (min-width: 768px) {
+	html {
+		font-size: 22px;
+	}
+	.container main {
+		padding: 1em 6em;
+	}
+}
+@media (min-width: 1024px) {
+	html {
+		font-size: 26px;
+	}
+	.container main {
+		padding: 1em 8em;
+	}
+}
+@media (min-width: 1600px) {
+	html {
+		font-size: 30px;
+	}
+	.container main {
+		padding: 1em 10em;
+		background: lime;
+	}
+}
