@@ -7,17 +7,27 @@
 	--grey-dark: #555;
 	--off-black: #333;
 
+	--home-primary: #ccc;
+	--home-scrollbar-color: #bbb;
+	--home-scrollbar-color-hover: #888;
+	--home-white: #fcfcfc;
+
 	--math-primary: #0a0;
-	--math-hover: #0c0;
+	// --math-scrollbar-color: #0a0;
+	--math-scrollbar-color-hover: #060;
 	--math-white: #fcfffc;
 
 	--statics-primary: #a00;
-	--statics-hover: #c00;
+	--statics-scrollbar-color-hover: #c00;
 	--statics-white: #efeded;
 
 	--fluids-primary: #0aa;
-	--fluids-hover: #0cc;
+	--fluids-scrollbar-color-hover: #0cc;
 	--fluids-white: #edefef;
+
+	// --scrollbar-thumb-math: var(--math-primary);
+	// --scrollbar-thumb-math-hover: var(--math-hover);
+	// --scrollbar-thumb-math-bg: var(--math-white);
 }
 
 html {
@@ -26,7 +36,7 @@ html {
 	height: 100dvh;
 	margin: 0;
 	padding: 0;
-	width: 100vw;
+	// width: 100vw;
 }
 
 *,
@@ -39,9 +49,139 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100dvh;
-	width: 100vw;
+	width: 100dvw;
 	overflow-y: hidden;
 }
+
+/* full browser window */
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100dvh;
+
+	main {
+		flex: 1;
+		padding: 1em;
+		overflow-y: auto;
+		scrollbar-gutter: stable;
+		scrollbar-width: auto;
+		&::-webkit-scrollbar {
+			width: 16px;
+		}
+	}
+
+	&.home main {
+		background: var(--home-white);
+		&::-webkit-scrollbar-thumb {
+			background: var(--home-scrollbar-color);
+			border-radius: 8px;
+			border: 4px solid var(--home-white);
+			&:hover {
+				background: var(--home-scrollbar-color-hover);
+			}
+		}
+	}
+	&.math main {
+		background: var(--math-white);
+		&::-webkit-scrollbar-thumb {
+			background: var(--math-primary);
+			border-radius: 8px;
+			border: 4px solid var(--math-white);
+			&:hover {
+				background: var(--math-scrollbar-color-hover);
+			}
+		}
+	}
+	&.statics main {
+		background: var(--statics-white);
+		&::-webkit-scrollbar-thumb {
+			background: var(--statics-primary);
+			border-radius: 8px;
+			border: 4px solid var(--statics-white);
+			&:hover {
+				background: var(--statics-scrollbar-color-hover);
+			}
+		}
+	}
+	&.fluids main {
+		background: var(--fluids-white);
+		&::-webkit-scrollbar-thumb {
+			background: var(--fluids-primary);
+			border-radius: 8px;
+			border: 4px solid var(--fluids-white);
+			&:hover {
+				background: var(--fluids-scrollbar-color-hover);
+			}
+		}
+	}
+
+	// &.home main::-webkit-scrollbar {
+	// 	width: 26px;
+	// }
+
+	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	header {
+		align-items: center;
+		border-bottom: 0.125rem solid black;
+		display: flex;
+		font-family: AlkesItalic;
+		justify-content: space-between;
+		padding: 0.25rem 1rem;
+		width: 100dvw;
+
+		h3 {
+			color: black;
+			letter-spacing: 0.03125em;
+			margin-block: 0;
+			padding-block: 0;
+
+			a {
+				color: inherit;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.left {
+			margin-right: 2rem;
+		}
+		.right {
+			text-align: right;
+		}
+
+		&.home {
+			background-color: var(--home-primary);
+		}
+		&.math {
+			background-color: var(--math-primary);
+		}
+		&.statics {
+			background-color: var(--statics-primary);
+		}
+		&.fluids {
+			background-color: var(--fluids-primary);
+		}
+	}
+}
+
+.home {
+	color: var(--home-primary);
+}
+.math {
+	color: var(--math-primary);
+}
+.fluids {
+	color: var(--fluids-primary);
+}
+.statics {
+	color: var(--statics-primary);
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 .alkesItalic {
 	font-family: AlkesItalic;
@@ -56,141 +196,48 @@ body {
 	font-family: AlkesLight;
 }
 
-/* full browser window */
-.container {
-	display: flex;
-	flex-direction: column;
-	height: 100dvh;
-
-	&.home {
-		--scrollbar-thumb: var(--grey-primary);
-	}
-	&.math {
-		--scrollbar-thumb: var(--math-primary);
-		background-color: var(--math-white);
-	}
-	&.statics {
-		--scrollbar-thumb: var(--statics-primary);
-	}
-	&.fluids {
-		--scrollbar-thumb: var(--fluids-primary);
-	}
-}
-
-header {
-	align-items: center;
-	border-bottom: 0.125rem solid black;
-	display: flex;
-	font-family: AlkesItalic;
-	justify-content: space-between;
-	overflow-y: hidden;
-	padding: 0.25rem 1rem;
-	width: 100dvw;
-
-	h3 {
-		color: black;
-		letter-spacing: 0.03125em;
-		margin-block: 0;
-		padding-block: 0;
-
-		a {
-			color: inherit;
-			text-decoration: none;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
-
-	.left {
-		margin-right: 2rem;
-	}
-	.right {
-		text-align: right;
-	}
-
-	&.home {
-		background-color: var(--grey-primary);
-	}
-	&.math {
-		background-color: var(--math-primary);
-	}
-	&.statics {
-		background-color: var(--statics-primary);
-	}
-	&.fluids {
-		background-color: var(--fluids-primary);
-	}
-}
-
-main {
-	flex: 1;
-	min-height: 0;
-	padding: 1em;
-	overflow-y: auto;
-	scrollbar-color: var(--scrollbar-thumb) transparent;
-	scrollbar-gutter: stable;
-
-	.math {
-		color: var(--math-primary);
-	}
-	.fluids {
-		color: var(--fluids-primary);
-	}
-	.statics {
-		color: var(--statics-primary);
-	}
-}
-
-main::-webkit-scrollbar-button {
-	display: none;
-}
-main::-webkit-scrollbar-thumb:hover {
-	background: orange;
-}
-
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 @media (max-width: 512px) {
+	.container main {
+		scrollbar-width: none;
+	}
 	::-webkit-scrollbar {
-		display: none;
+		display: none; // fallback for older browsers
 	}
 }
-@media (min-width: 512px) {
-	html {
-		font-size: 3vw;
-	}
-	main {
-		padding: 1em 2em;
-		background-color: pink;
-		font-size: 20px;
-	}
-	// width //
-	::-webkit-scrollbar {
-		width: 16px;
-	}
-	//  Track
-	::-webkit-scrollbar-track {
-		background: var(--primary-grey);
-		width: 16px;
-	}
-}
-@media (min-width: 768px) {
-	html {
-		font-size: 2.5vw;
-	}
-	main {
-		padding: 1em 6em;
-		background: yellow;
-	}
-}
-@media (min-width: 1024px) {
-	html {
-		font-size: 2vw;
-	}
-	main {
-		padding: 10em 5em;
-		background: lime;
-	}
-}
+// @media (min-width: 512px) {
+// 	html {
+// 		font-size: 20px;
+// 	}
+// 	main {
+// 		padding: 1em 2em;
+// 	}
+// }
+// @media (min-width: 768px) {
+// 	html {
+// 		font-size: 24px;
+// 	}
+// 	main {
+// 		padding: 1em 16em;
+// 		background: yellow;
+// 	}
+// }
+// @media (min-width: 1024px) {
+// 	html {
+// 		font-size: 24px;
+// 	}
+// 	main {
+// 		padding: 10em 5em;
+// 		// background: lime;
+// 	}
+// }
+// @media (min-width: 1600px) {
+// 	html {
+// 		font-size: 30px;
+// 	}
+// 	main {
+// 		padding: 10em 5em;
+// 		background: lime;
+// 	}
+// }
