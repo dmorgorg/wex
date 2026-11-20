@@ -28,3 +28,11 @@
 		{/if}
 	</div>
 </header>
+
+<style>
+	header h3 {
+		font-size: 1rem;
+		margin-block: 0;
+		margin-top: 0.125em;
+	}
+</style>

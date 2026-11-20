@@ -61,6 +61,7 @@ body {
 
 	main {
 		flex: 1;
+		font-family: alkesItalic;
 		padding: 1em;
 		overflow-y: auto;
 		scrollbar-gutter: stable;
@@ -83,6 +84,7 @@ body {
 	}
 	&.math main {
 		background: var(--math-white);
+		color: black;
 		&::-webkit-scrollbar-thumb {
 			background: var(--math-primary);
 			border-radius: 8px;
@@ -90,6 +92,10 @@ body {
 			&:hover {
 				background: var(--math-scrollbar-color-hover);
 			}
+		}
+		h4 {
+			margin-block: 0;
+			margin-bottom: 0.5em;
 		}
 	}
 	&.statics main {
@@ -194,6 +200,25 @@ body {
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+.katex-display > .katex {
+	white-space: normal;
+}
+/* Add space between broken lines: */
+.katex-display > .base {
+	margin: 0.25em 0;
+}
+/* Compensate by reducing space around display math */
+.katex-display {
+	margin: 0.5em 0;
+	line-height: 2;
+}
+
+.katex {
+	font-size: 1em !important;
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 @media (max-width: 512px) {
 	.container main {
 		scrollbar-width: none;
@@ -235,6 +260,5 @@ body {
 	}
 	.container main {
 		padding: 1em 10em;
-		background: lime;
 	}
 }

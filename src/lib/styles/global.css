@@ -50,6 +50,7 @@ body {
 }
 .container main {
   flex: 1;
+  font-family: alkesItalic;
   padding: 1em;
   overflow-y: auto;
   scrollbar-gutter: stable;
@@ -71,6 +72,7 @@ body {
 }
 .container.math main {
   background: var(--math-white);
+  color: black;
 }
 .container.math main::-webkit-scrollbar-thumb {
   background: var(--math-primary);
@@ -79,6 +81,10 @@ body {
 }
 .container.math main::-webkit-scrollbar-thumb:hover {
   background: var(--math-scrollbar-color-hover);
+}
+.container.math main h4 {
+  margin-block: 0;
+  margin-bottom: 0.5em;
 }
 .container.statics main {
   background: var(--statics-white);
@@ -175,6 +181,25 @@ body {
   font-family: AlkesLight;
 }
 
+.katex-display > .katex {
+  white-space: normal;
+}
+
+/* Add space between broken lines: */
+.katex-display > .base {
+  margin: 0.25em 0;
+}
+
+/* Compensate by reducing space around display math */
+.katex-display {
+  margin: 0.5em 0;
+  line-height: 2;
+}
+
+.katex {
+  font-size: 1em !important;
+}
+
 @media (max-width: 512px) {
   .container main {
     scrollbar-width: none;
@@ -216,6 +241,5 @@ body {
   }
   .container main {
     padding: 1em 10em;
-    background: lime;
   }
 }/*# sourceMappingURL=global.css.map */

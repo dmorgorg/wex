@@ -21,5 +21,8 @@
 		"mdsvex": "^0.12.7",
 		"svelte": "^5.57.2",
 		"vite": "^8.3.0"
+	},
+	"dependencies": {
+		"katex": "^0.19.1"
 	}
 }

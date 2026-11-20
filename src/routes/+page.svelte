@@ -11,55 +11,55 @@
 	<Header {topMatter} />
 	<main>
 		<ul class="alkesItalic">
-			<li class="math">
+			<li class="math discipline">
 				Mathematics
 				<ul>
-					<li>
+					<li class="subject">
 						Calculus
 						<ol>
-							<li>
+							<li class="topic">
 								Limits
 								<ol>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/01basic">Basic&nbsp;Limits</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/02infinity">Limits&nbsp;at&nbsp;Infinity</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/03trigonometric">Trigonometric&nbsp;Limits</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/04explog">
 											Exponential&nbsp;and&nbsp;Logarithmic&nbsp;Limits
 										</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/05Lhopital"> L'Hôpital's&nbsp;Rule </a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<!-- the code is for non-breaking hyphen -->
 										<a href="/math/calculus/limits/06oneSided">One&#8209;sided&nbsp;Limits</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/07piecewise">Piecewise&nbsp;Functions</a>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/08parameters">Limits&nbsp;with&nbsp;Parameters</a
 										>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/09squeeze"
 											>Squeeze&nbsp;Theorem&nbsp;and&nbsp;Special&nbsp;Limits</a
 										>
 									</li>
-									<li class="inline">
+									<li class="inline sub-topic">
 										<a href="/math/calculus/limits/10multi">Multivariable&nbsp;Limits</a>
 									</li>
 								</ol>
 							</li>
-							<li>Differentiation</li>
-							<li>Integration</li>
+							<li class="topic">Differentiation</li>
+							<li class="topic">Integration</li>
 						</ol>
 					</li>
 				</ul>
@@ -124,6 +124,21 @@
 			&:not(:last-child)::after {
 				/* content: '\00a0\2014'; */
 				content: '\00a0\00a0\00a0';
+			}
+		}
+
+		li {
+			&.discipline {
+				font-size: 1rem;
+			}
+			&.subject {
+				font-size: 0.95rem;
+			}
+			&.topic {
+				font-size: 0.9rem;
+			}
+			&.sub-topic {
+				font-size: 0.8rem;
 			}
 		}
 
