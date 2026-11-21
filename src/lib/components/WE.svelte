@@ -1,8 +1,9 @@
 <script>
 	import { slide } from 'svelte/transition'
+	import ExampleStatement from '#lib/components/ExampleStatement.svelte'
 
 	// statement is always visible; solution and answer are optional and toggled independently
-	let { children, solution, answer } = $props()
+	let { children, solution, answer, levels = '00' } = $props()
 
 	const id = $props.id()
 	let showSolution = $state(false)
@@ -10,7 +11,7 @@
 </script>
 
 <section class="worked-example" class:has-controls={solution || answer}>
-	<div class="children">{@render children()}</div>
+	<ExampleStatement {children} {levels} />
 
 	{#if solution || answer}
 		<div class="controls">
@@ -18,19 +19,13 @@
 				<button
 					type="button"
 					aria-expanded={showSolution}
-					aria-controls="{id}-solution"
 					onclick={() => (showSolution = !showSolution)}
 				>
 					{showSolution ? 'Hide' : 'View'} Solution
 				</button>
 			{/if}
 			{#if answer}
-				<button
-					type="button"
-					aria-expanded={showAnswer}
-					aria-controls="{id}-answer"
-					onclick={() => (showAnswer = !showAnswer)}
-				>
+				<button type="button" aria-expanded={showAnswer} onclick={() => (showAnswer = !showAnswer)}>
 					{showAnswer ? 'Hide' : 'Check'} Answer
 				</button>
 			{/if}
@@ -43,7 +38,7 @@
 		</div>
 	{/if}
 	{#if answer && showAnswer}
-		<div class="panel answer" id="{id}-answer" transition:slide={{ duration: 750 }}>
+		<div class="panel answer" transition:slide={{ duration: 750 }}>
 			<span class="bold">Answer</span>:{@render answer()}
 		</div>
 	{/if}

@@ -2,6 +2,7 @@
 	import Header from '#lib/components/Header.svelte'
 	import WE from '#lib/components/WE.svelte'
 	import { ki, kd } from '#lib/utilities.js'
+	const levels = '10'
 	const topMatter = {
 		theme: 'math',
 		headerLeft: ['WorkedExampl.es', true, '/'],
@@ -16,7 +17,7 @@
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)`}
 
 			{#snippet solution()}
@@ -30,7 +31,7 @@
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}`}
 
 			{#snippet solution()}
@@ -52,7 +53,7 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}`}
 
 			{#snippet solution()}
@@ -62,11 +63,11 @@
 			{/snippet}
 
 			{#snippet answer()}
-				{@html kd`6`}
+				{@html kd`\lim_{x \to 3} \frac{x^2 - 9}{x-3}=6`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
 
 			{#snippet solution()}
@@ -84,33 +85,41 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 1} \frac{x^3 - 1}{x-1}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				{@html kd`
+				\begin{aligned} 
+					\frac{x^3-1}{x-1} &= \frac{(\cancel{x-1})(x^2+x+1)}{\cancel{x-1}} \\[5px]					
+					\Rightarrow \lim_{x \to 1} \frac{x^3 - 1}{x-1}&=\lim_{x \to 1} (x^2+x+1)=(1)^2+(1)+1=3
+				\end{aligned}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				{@html kd`\lim_{x \to 1} \frac{x^3 - 1}{x-1}=3`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				{@html kd`
+				\begin{aligned} 
+					\frac{x-4}{\sqrt{x} - 2} &=\frac{(\cancel{\sqrt{x} - 2})(\sqrt{x} + 2)}{\cancel{\sqrt{x} - 2}}=\sqrt{x} + 2\\[5px]					
+					\Rightarrow\lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2} &= \lim_{x \to 4} (\sqrt{x} + 2)=\sqrt{4} + 2=4
+				\end{aligned}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				{@html kd`\lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2}=4`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
 
 			{#snippet solution()}
@@ -123,7 +132,7 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
 
 			{#snippet solution()}
@@ -136,7 +145,7 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to -2} \frac{x^2 + x - 2}{x+2}`}
 
 			{#snippet solution()}
@@ -149,7 +158,7 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE>
+		<WE {levels}>
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 1} \frac{x^4 - 1}{x^2 - 1}`}
 
 			{#snippet solution()}
@@ -164,3 +173,9 @@
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 	</main>
 </div>
+
+<style>
+	main {
+		counter-reset: section-counter 1 subsection-counter 1 subsubsection-counter 0 problem-counter 0;
+	}
+</style>

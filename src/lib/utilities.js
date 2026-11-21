@@ -12,16 +12,16 @@ export const ki = (strings, ...values) => katex.renderToString(String.raw(string
 export const kd = (strings, ...values) =>
 	katex.renderToString(String.raw(strings, ...values), { displayMode: true })
 
-// $$...$$ is display math, $...$ is inline math, and \$ is a literal dollar sign
-const MATH = /\\\$|\$\$([\s\S]+?)\$\$|\$((?:\\[\s\S]|[^$\\])+?)\$/g
+// // $$...$$ is display math, $...$ is inline math, and \$ is a literal dollar sign
+// const MATH = /\\\$|\$\$([\s\S]+?)\$\$|\$((?:\\[\s\S]|[^$\\])+?)\$/g
 
-// text mixed with math, e.g. km`Evaluate $\lim_{x \to 3} (2x + 1)$.`
-// The text itself is treated as HTML, and a $ must not be directly followed by { (JS template syntax)
-// @ts-ignore
-export const km = (strings, ...values) =>
-	String.raw(strings, ...values).replace(MATH, (match, display, inline) => {
-		if (match === '\\$') return '$'
-		return display === undefined
-			? katex.renderToString(inline)
-			: katex.renderToString(display, { displayMode: true })
-	})
+// // text mixed with math, e.g. km`Evaluate $\lim_{x \to 3} (2x + 1)$.`
+// // The text itself is treated as HTML, and a $ must not be directly followed by { (JS template syntax)
+// // @ts-ignore
+// export const km = (strings, ...values) =>
+// 	String.raw(strings, ...values).replace(MATH, (match, display, inline) => {
+// 		if (match === '\\$') return '$'
+// 		return display === undefined
+// 			? katex.renderToString(inline)
+// 			: katex.renderToString(display, { displayMode: true })
+// 	})
