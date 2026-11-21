@@ -38,3 +38,15 @@
 	font-family: 'AlkesLight';
 	src: url(../fonts/AlkesLight.TTF) format('truetype');
 }
+@font-face {
+	font-family: 'glacialIndifferenceReg';
+	src: url(../fonts/GlacialIndifference-Regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'texGyre';
+	src: url(../fonts/texgyreadventor-regular.otf) format('truetype');
+}
+@font-face {
+	font-family: 'quicksand';
+	src: url(../fonts/Quicksand_Book.otf) format('truetype');
+}

@@ -11,7 +11,7 @@
   --home-white: #fcfcfc;
   --math-primary: #0a0;
   --math-scrollbar-color-hover: #060;
-  --math-white: #fcfffc;
+  --math-white: #f8fff8;
   --statics-primary: #a00;
   --statics-scrollbar-color-hover: #c00;
   --statics-white: #efeded;
@@ -198,6 +198,7 @@ body {
 
 .katex {
   font-size: 1em !important;
+  white-space: nowrap; /* prevent line break in katex */
 }
 
 @media (max-width: 512px) {
