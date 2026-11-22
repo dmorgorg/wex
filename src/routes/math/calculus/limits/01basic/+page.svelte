@@ -137,11 +137,20 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
 
 			{#snippet solution()}
-				?
+				<blockquote>
+					Again, we have the form {@html ki`\frac{0}{0}`} at {@html ki`x=0`}. But expanding {@html ki`(x+1)^2`}
+					yields a numerator that has a factor {@html ki`x`} in common with the denominator.
+				</blockquote>
+				{@html kd`
+				\begin{aligned} 
+					\frac{(x+1)^2 - 1}{x} &=\frac{(x^2+2x+\cancel{1}) - \cancel{1}}{x}=\frac{x^2+2x}{x}=\frac{\cancel{x}(x+2)}{\cancel{x}} \qquad(\text{for }x\ne 0)\\[5px]					
+					\Rightarrow\lim_{x \to 0}\frac{(x+1)^2 - 1}{x} &=\lim_{x \to 0}(x+2) =2
+				\end{aligned}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html kd`\lim_{x \to 0} \frac{(x+1)^2 - 1}{x}=2`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
