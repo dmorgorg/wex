@@ -7,7 +7,7 @@
 <style>
 	h3 {
 		counter-increment: subsubsection-counter;
-		counter-set: problem-counter 0;
+		counter-set: subsubsubsection-counter 0 problem-counter 0;
 		margin: 1.5rem auto 0.5rem;
 	}
 

@@ -2,11 +2,11 @@
 	import Header from '#lib/components/Header.svelte'
 	import WE from '#lib/components/WE.svelte'
 	import { ki, kd } from '#lib/utilities.js'
-	const levels = '10'
+	const levels = 2
 	const topMatter = {
 		theme: 'math',
 		headerLeft: ['WorkedExampl.es', true, '/'],
-		headerRight: ['1 Limits', false], // statics, strength, fluids
+		headerRight: ['1. Limits', false], // statics, strength, fluids
 	}
 </script>
 
@@ -21,8 +21,11 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)`}
 
 			{#snippet solution()}
-				Since {@html ki`3x^2 - 5x + 2`} is continuous everywhere, we can simply evaluate the expression
-				at {@html ki`x=2`}:{@html kd`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)=3(2)^2 -5(2)+2 = 4`}
+				<blockquote>
+					Since {@html ki`3x^2 - 5x + 2`} is continuous everywhere, we can simply evaluate the expression
+					at {@html ki`x=2`}
+				</blockquote>
+				{@html kd`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)=3(2)^2 -5(2)+2 = 4`}
 			{/snippet}
 
 			{#snippet answer()}
@@ -35,16 +38,19 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}`}
 
 			{#snippet solution()}
-				{@html ki`\small\displaystyle\frac{x^2 - 1}{x+1}`} is of the form {@html ki`\small\displaystyle\frac{0}{0}`}
-				at {@html ki`x=-1`}
-				so straightforward evaluation of {@html ki`\small\displaystyle\frac{x^2 - 1}{x+1}`} is not an
-				option. Notice, however, that {@html ki`x^2 - 1`}
-				is divisible by {@html ki`x+1`} and, secondly, that division by {@html ki`x+1`} is legal since
-				{@html ki`x`} can get arbitrarily close to {@html ki`-1`} but never quite reaches it: {@html ki`x+1`}
-				is never equal to {@html ki`0`}.
+				<blockquote>
+					{@html ki`\large\frac{x^2 - 1}{x+1}`} is of the form {@html ki`\large\frac{0}{0}`}
+					at {@html ki`x=-1`}
+					so straightforward evaluation of {@html ki`\large\frac{x^2 - 1}{x+1}`} is not an option. Notice,
+					however, that {@html ki`x^2 - 1`}
+					is divisible by {@html ki`x+1`} and, secondly, that division by {@html ki`x+1`} is legal since
+					{@html ki`x`} can get arbitrarily close to {@html ki`-1`} but never quite reaches it and so
+					{@html ki`x+1`}
+					is never equal to {@html ki`0`}.
+				</blockquote>
 				{@html kd`
-					\frac{x^2-1}{x+1}= \frac{(x+1)(x-1)}{x+1}=x-1\\[5px]
-					\Rightarrow\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}=\lim_{x \to -1}x-1=(-1)-1=-2
+					\frac{x^2-1}{x+1}= \frac{(\cancel{x+1})(x-1)}{\cancel{x+1}}=x-1\qquad(\text{for }x\ne -1)\\[5px]
+					\Rightarrow\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}=\lim_{x \to -1}(x-1)=(-1)-1=-2
 					`}
 			{/snippet}
 
@@ -57,9 +63,17 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}`}
 
 			{#snippet solution()}
+				<blockquote>
+					{@html ki`\large\frac{x^2 - 9}{x-3}`} is of the form {@html ki`\large\frac{0}{0}`}
+					at {@html ki`x=3`}
+					so straightforward evaluation of the function at {@html ki`x=3`} is not an option. But {@html ki`x-3`}
+					is a factor of {@html ki`x^2-9`} so we can proceed with algebra. Remember that we are looking
+					for the behaviour of {@html ki`\large\frac{x^2 - 9}{x-3}`} arbitrarily close (but not at) {@html ki`x=3`}
+					so division by {@html ki`x-3`} is not division by {@html ki`0`} and still a valid operation.
+				</blockquote>
 				{@html kd` 
-				\frac{x^2 - 9}{x-3}= \frac{(x+3)\cancel{(x-3)}}{\cancel{x-3}}\qquad\text{for }x\ne 3 \\[5px]
-				\Rightarrow\displaystyle \displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}=\displaystyle \lim_{x \to 3} x+3=6`}
+				\frac{x^2 - 9}{x-3}= \frac{(x+3)\cancel{(x-3)}}{\cancel{x-3}}\qquad(\text{for }x\ne 3) \\[5px]
+				\Rightarrow\displaystyle \displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}=\displaystyle \lim_{x \to 3} (x+3)=(3)+3=6`}
 			{/snippet}
 
 			{#snippet answer()}
@@ -71,6 +85,14 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
 
 			{#snippet solution()}
+				<blockquote>
+					{@html ki`\large\frac{x^2 - 9}{x-3}`} is of the form {@html ki`\large\frac{0}{0}`}
+					at {@html ki`x=3`}
+					so straightforward evaluation of the function at {@html ki`x=3`} is not an option. But {@html ki`x-3`}
+					is a factor of {@html ki`x^2-9`} so we can proceed with algebra. Remember that we are looking
+					for the behaviour of {@html ki`\large\frac{x^2 - 9}{x-3}`} arbitrarily close (but not at) {@html ki`x=3`}
+					so division by {@html ki`x-3`} is not division by {@html ki`0`} and still a valid operation.
+				</blockquote>
 				{@html kd`
 				\begin{aligned} 
 				\frac{\sqrt{x+4} - 2}{x} &= \frac{\sqrt{x+4} - 2}{x} \cdot \frac{\sqrt{x+4} + 2}{\sqrt{x+4} + 2} \\[5px]

@@ -1,8 +1,8 @@
 <script>
-	let { children, levels = '00' } = $props()
+	let { children, levels = 1 } = $props()
 
 	const level = $derived.by(() => {
-		if (!['00', '01', '10', '11'].includes(levels)) {
+		if (![1, 2, 3, 4].includes(levels)) {
 			throw new Error(`Invalid example numbering levels: ${levels}`)
 		}
 		return levels
@@ -11,10 +11,10 @@
 
 <div
 	class="children"
-	class:_00-Example={level === '00'}
-	class:_01-Example={level === '01'}
-	class:_10-Example={level === '10'}
-	class:_11-Example={level === '11'}
+	class:_1-Example={level === 1}
+	class:_2-Example={level === 2}
+	class:_3-Example={level === 3}
+	class:_4-Example={level === 4}
 >
 	{@render children()}
 </div>
@@ -26,22 +26,23 @@
 		margin-right: 0.5em;
 	}
 
-	._00-Example::before {
+	._1-Example::before {
 		content: 'Example ' counter(section-counter) '.' counter(problem-counter) '.';
 	}
 
-	._01-Example::before {
-		content: 'Example ' counter(section-counter) '.' counter(subsubsection-counter) '.'
-			counter(problem-counter) '.';
-	}
-
-	._10-Example::before {
+	._2-Example::before {
 		content: 'Example ' counter(section-counter) '.' counter(subsection-counter) '.'
 			counter(problem-counter) '.';
 	}
 
-	._11-Example::before {
+	._3-Example::before {
 		content: 'Example ' counter(section-counter) '.' counter(subsection-counter) '.'
 			counter(subsubsection-counter) '.' counter(problem-counter) '.';
+	}
+
+	._4-Example::before {
+		content: 'Example ' counter(section-counter) '.' counter(subsection-counter) '.'
+			counter(subsubsection-counter) '.' counter(subsubsubsection-counter) '.'
+			counter(problem-counter) '.';
 	}
 </style>

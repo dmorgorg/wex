@@ -52,3 +52,16 @@ npm run build
 ```
 
 You can preview the production build with `npm run preview`.
+
+## Worked-example numbering
+
+Set `levels` on `WE` to the number of section components before the example number:
+1 for section, 2 for section and subsection, 3 for section through subsubsection,
+or 4 to include subsubsubsection. It defaults to 1.
+
+Initialize the relevant CSS counters on an ancestor shared by the examples, as in
+[`01basic/+page.svelte`](src/routes/math/calculus/limits/01basic/+page.svelte).
+The counters are `section-counter`, `subsection-counter`, `subsubsection-counter`,
+`subsubsubsection-counter`, and `problem-counter`. Reset `problem-counter` when
+starting a new group. `SubsubsectionHeader` increments the subsubsection counter
+and resets the subsubsubsection and example counters.

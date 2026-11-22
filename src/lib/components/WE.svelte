@@ -3,9 +3,8 @@
 	import ExampleStatement from '#lib/components/ExampleStatement.svelte'
 
 	// statement is always visible; solution and answer are optional and toggled independently
-	let { children, solution, answer, levels = '00' } = $props()
+	let { children, solution, answer, levels = 1 } = $props()
 
-	const id = $props.id()
 	let showSolution = $state(false)
 	let showAnswer = $state(false)
 </script>
@@ -33,13 +32,14 @@
 	{/if}
 
 	{#if solution && showSolution}
-		<div class="panel solution" id="{id}-solution" transition:slide={{ duration: 750 }}>
-			<span class="bold">Solution</span>: {@render solution()}
+		<div class="panel solution" transition:slide={{ duration: 750 }}>
+			<span class="solution-label"><span class="bold">Solution</span>:</span>{@render solution()}
 		</div>
 	{/if}
 	{#if answer && showAnswer}
 		<div class="panel answer" transition:slide={{ duration: 750 }}>
-			<span class="bold">Answer</span>:{@render answer()}
+			<div><span class="bold">Answer</span>:</div>
+			<div class="answer-content">{@render answer()}</div>
 		</div>
 	{/if}
 </section>
@@ -57,8 +57,9 @@
 		flex-direction: column;
 		font-family: glacialIndifferenceReg;
 		font-family: texGyre;
+		font-family: jost;
 		/* font-family: quicksand; */
-		font-size: 85%;
+		font-size: 90%;
 		margin-block: 0.75em;
 		padding: 0.5em 1em;
 	}
@@ -70,12 +71,22 @@
 	/* the page's theme class (on .container) picks the accent colour */
 	:global(.math) section {
 		--accent: var(--math-primary);
+		--blockquote-background: var(--math-white);
 	}
 	:global(.statics) section {
 		--accent: var(--statics-primary);
+		--blockquote-background: var(--statics-white);
 	}
 	:global(.fluids) section {
 		--accent: var(--fluids-primary);
+		--blockquote-background: var(--fluids-white);
+	}
+
+	:global(.math) section :global(blockquote),
+	:global(.statics) section :global(blockquote),
+	:global(.fluids) section :global(blockquote) {
+		background-color: var(--blockquote-background);
+		border-color: var(--accent);
 	}
 
 	.controls {
@@ -106,8 +117,32 @@
 	.panel {
 		border-top: 3px solid var(--accent);
 		display: flow-root;
-		line-height: 1;
+		line-height: 1.25;
 		margin-top: 0.5em;
 		padding-top: 0.5em;
+	}
+
+	.solution-label {
+		float: left;
+		margin-right: 0.5em;
+	}
+
+	.solution :global(.katex-display) {
+		display: table;
+		margin: 0 auto 0.5em;
+		max-width: 100%;
+		width: max-content;
+	}
+
+	.answer {
+		align-items: flex-start;
+		display: flex;
+		gap: 0.5em;
+	}
+
+	.answer-content {
+		flex: 1;
+		min-width: 0;
+		text-align: center;
 	}
 </style>
