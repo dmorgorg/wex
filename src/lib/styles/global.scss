@@ -211,7 +211,7 @@ body {
 .katex-display {
 	padding-top: 0.75em;
 
-	line-height: 2;
+	// line-height: 2;
 	// border: 1px solid black;
 }
 
@@ -220,12 +220,23 @@ body {
 	white-space: nowrap; /* prevent line break in katex */
 }
 
+div.example-statement {
+	.katex {
+		font-size: 1.05em !important;
+	}
+}
+
 blockquote {
 	border: 1px solid var(--math-primary);
-	background-color: var(--math-white);
+	// background-color: var(--math-white);
 	margin-top: 1.5em;
 	margin-bottom: 0.5em;
 	padding: 0.75em;
+
+	.katex {
+		// color: red;
+		font-size: 1em !important;
+	}
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -18,7 +18,7 @@
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -34,8 +34,88 @@
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to -2} x(x+2)(x+4)`}
+
+			{#snippet solution()}
+				<blockquote>
+					{@html ki`f(x)=x(x+2)(x+4)`} is continuous everywhere; evaluate at {@html ki` x=-2`}
+				</blockquote>
+				{@html kd`\displaystyle \lim_{x \to -2} x(x+2)(x+4) = (-2)((-2)+2)((-2)+4)= (-2)(0)(2)=0`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{x \to -2} x(x+2)(x+4)=0`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)`}
+
+			{#snippet solution()}
+				<blockquote>
+					{@html ki` \large\frac{t^2}{6-t}`} is continuous everywhere except at {@html ki` t=6`};
+					evaluate at {@html ki` x=-3`}
+				</blockquote>
+				{@html kd`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)=\frac{(-3)^2}{6-(-3)} =1 `}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)=1`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{s \to 3} \left(\frac{1}{9-s^2}\right)`}
+
+			{#snippet solution()}
+				<blockquote>
+					{@html ki` \large\frac{1}{9-s^2}`} is not defined at {@html ki` s=3`} and there is no algebraic
+					manipulation that can make into a form that exists at {@html ki` s=3`}. The limit does not
+					exist (D.N.E.)
+				</blockquote>
+				{@html kd`\lim_{s \to 3} \left(\frac{1}{9-s^2}\right)\textsf{does not exist}`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\lim_{s \to 3} \left(\frac{1}{9-s^2}\right)\textsf{does not exist}`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right)`}
+
+			{#snippet solution()}
+				<blockquote>
+					{@html ki` \Large\frac{x}{\sqrt{3+x}-\sqrt{3-x}}`} is not defined at {@html ki` x=0`} so use
+					a suitable algebraic manipulation to find an equivalent (except at {@html ki` x=0`})
+					expression that does exist at {@html ki` x=0`}
+				</blockquote>
+				{@html kd`
+				\begin{aligned}
+					\frac{x}{\sqrt{3+x}-\sqrt{3-x}} &=\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\cdot\frac{\sqrt{3+x}+\sqrt{3-x}}{\sqrt{3+x}+\sqrt{3-x}} \\[0.75em]
+					&= \frac{x(\sqrt{3+x}+\sqrt{3-x})}{(3+x)-(3-x)}\\[0.75em]
+					&= \frac{\cancel{x}(\sqrt{3+x}+\sqrt{3-x})}{2\cancel{x}}\qquad\textsf{for }x\ne 0\\[0.75em]
+					\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right) &= \lim_{x \to 0}\frac{\sqrt{3+x}+\sqrt{3-x}}{2}=\frac{\sqrt{3+(0)}+\sqrt{3-(0)}}{2}=\sqrt{3}
+				\end{aligned}`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right) =\sqrt{3}`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -60,7 +140,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -82,7 +162,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
 
 			{#snippet solution()}
 				{@html kd`
@@ -100,7 +180,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 1} \frac{x^3 - 1}{x-1}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 1} \frac{x^3 - 1}{x-1}`}
 
 			{#snippet solution()}
 				{@html kd`
@@ -117,7 +197,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2}`}
 
 			{#snippet solution()}
 				{@html kd`
@@ -134,7 +214,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -155,7 +235,7 @@
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
 
 			{#snippet solution()}
 				{@html kd`
@@ -170,11 +250,17 @@
 				{@html kd`\lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}=0`}
 			{/snippet}
 		</WE>
+
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to -2} \left(\frac{x^2-x-6}{x^2+7x+10}\right)`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to -2} \left(\frac{x^2-x-6}{x^2+7x+10}\right)`}
 
 			{#snippet solution()}
+				<blockquote>
+					{@html ki`\large\frac{x^2-x-6}{x^2+7x+10}`} is undefined at {@html ki`x=-2`} so find common
+					factors in the numerator and the denominator, and cancel these common factors.
+				</blockquote>
 				{@html kd`
 				\begin{aligned} 
 					\frac{x^2-x-6}{x^2+7x+10} &=\frac{\cancel{(x+2)}(x-3)}{\cancel{(x+2)}(x+5)}=\frac{x-3}{x+5}\qquad(\text{for }x\ne -2)\\[5px]					
@@ -188,17 +274,31 @@
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to 1} \frac{x^4 - 1}{x^2 - 1}`}
+			Evaluate {@html ki`\displaystyle \lim_{y \to 1} \frac{y+\sqrt{y}-2}{y+2\sqrt{y}-3}`}
 
 			{#snippet solution()}
-				?
+				<blockquote>
+					{@html ki`\large\frac{y+\sqrt{y}-2}{y+2\sqrt{y}-3}`} is of the form {@html ki`\Large\frac{0}{0}`}
+					at {@html ki`x=1`}. Factor the numerator and denominator and cancel where possible to
+					evaluate at {@html ki`x=1`}.
+				</blockquote>
+				{@html kd`
+				\begin{gather*} 
+					\frac{y+\sqrt{y}-2}{y+2\sqrt{y}-3} =\frac{\cancel{(\sqrt{y}-1)}(\sqrt{y}+2)}{\cancel{(\sqrt{y}-1)}(\sqrt{y}+3)}=\frac{\sqrt{y}+2}{\sqrt{y}+3}\qquad(\text{for }y\ne 1)\\[15px]					
+					\Rightarrow\lim_{x \to 1}\frac{y+\sqrt{y}-2}{y+2\sqrt{y}-3} =\lim_{x \to 1} \frac{\sqrt{y}+2}{\sqrt{y}+3} =\frac{3}{4}
+				\end{gather*}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html kd`\displaystyle \lim_{x \to 1} \frac{y+\sqrt{y}-2}{y+2\sqrt{y}-3}=\frac{3}{4}`}
 			{/snippet}
 		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 	</main>
 </div>

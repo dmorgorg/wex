@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="children"
+	class="children example-statement"
 	class:_1-Example={level === 1}
 	class:_2-Example={level === 2}
 	class:_3-Example={level === 3}
@@ -45,4 +45,8 @@
 			counter(subsubsection-counter) '.' counter(subsubsubsection-counter) '.'
 			counter(problem-counter) '.';
 	}
+
+	/* .example-statement {
+		color: blue;
+	} */
 </style>
