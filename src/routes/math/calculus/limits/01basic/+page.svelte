@@ -158,11 +158,16 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
 
 			{#snippet solution()}
-				?
+				{@html kd`
+				\begin{aligned} 
+					\frac{x^2 - 4x + 4}{x-2} &=\frac{(x-2)^2}{x-2}=x-2\qquad(\text{for }x\ne 2)\\[5px]					
+					\Rightarrow\lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2} &=\lim_{x \to 2} (x-2) =0
+				\end{aligned}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html ki`\lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}=0`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
