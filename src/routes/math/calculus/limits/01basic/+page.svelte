@@ -53,25 +53,25 @@
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)`}
+			Evaluate {@html ki`\displaystyle \lim_{t \to -3} \frac{t^2}{6-t}`}
 
 			{#snippet solution()}
 				<blockquote>
 					{@html ki` \large\frac{t^2}{6-t}`} is continuous everywhere except at {@html ki` t=6`};
 					evaluate at {@html ki` x=-3`}
 				</blockquote>
-				{@html kd`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)=\frac{(-3)^2}{6-(-3)} =1 `}
+				{@html kd`\displaystyle \lim_{t \to -3} \frac{t^2}{6-t}=\frac{(-3)^2}{6-(-3)} =1 `}
 			{/snippet}
 
 			{#snippet answer()}
-				{@html kd`\displaystyle \lim_{t \to -3} \left(\frac{t^2}{6-t}\right)=1`}
+				{@html kd`\displaystyle \lim_{t \to -3} \frac{t^2}{6-t}=1`}
 			{/snippet}
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{s \to 3} \left(\frac{1}{9-s^2}\right)`}
+			Evaluate {@html ki`\displaystyle \lim_{s \to 3} \frac{1}{9-s^2}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -79,18 +79,18 @@
 					manipulation that can make into a form that exists at {@html ki` s=3`}. The limit does not
 					exist (D.N.E.)
 				</blockquote>
-				{@html kd`\lim_{s \to 3} \left(\frac{1}{9-s^2}\right)\textsf{does not exist}`}
+				{@html kd`\lim_{s \to 3} \frac{1}{9-s^2}\textsf{does not exist}`}
 			{/snippet}
 
 			{#snippet answer()}
-				{@html kd`\lim_{s \to 3} \left(\frac{1}{9-s^2}\right)\textsf{does not exist}`}
+				{@html kd`\lim_{s \to 3} \frac{1}{9-s^2}\textsf{does not exist}`}
 			{/snippet}
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right)`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{3+x}-\sqrt{3-x}}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -103,12 +103,12 @@
 					\frac{x}{\sqrt{3+x}-\sqrt{3-x}} &=\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\cdot\frac{\sqrt{3+x}+\sqrt{3-x}}{\sqrt{3+x}+\sqrt{3-x}} \\[0.75em]
 					&= \frac{x(\sqrt{3+x}+\sqrt{3-x})}{(3+x)-(3-x)}\\[0.75em]
 					&= \frac{\cancel{x}(\sqrt{3+x}+\sqrt{3-x})}{2\cancel{x}}\qquad\textsf{for }x\ne 0\\[0.75em]
-					\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right) &= \lim_{x \to 0}\frac{\sqrt{3+x}+\sqrt{3-x}}{2}=\frac{\sqrt{3+(0)}+\sqrt{3-(0)}}{2}=\sqrt{3}
+					\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{3+x}-\sqrt{3-x}} &= \lim_{x \to 0}\frac{\sqrt{3+x}+\sqrt{3-x}}{2}=\frac{\sqrt{3+(0)}+\sqrt{3-(0)}}{2}=\sqrt{3}
 				\end{aligned}`}
 			{/snippet}
 
 			{#snippet answer()}
-				{@html kd`\displaystyle \lim_{x \to 0} \left(\frac{x}{\sqrt{3+x}-\sqrt{3-x}}\right) =\sqrt{3}`}
+				{@html kd`\displaystyle \lim_{x \to 0} \frac{x}{\sqrt{3+x}-\sqrt{3-x}} =\sqrt{3}`}
 			{/snippet}
 		</WE>
 
@@ -138,7 +138,9 @@
 				{@html kd`\displaystyle \lim_{x \to -1} \frac{x^2 - 1}{x+1}=-2`}
 			{/snippet}
 		</WE>
+
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<WE {levels}>
 			Evaluate {@html ki`\displaystyle \lim_{x \to 3} \frac{x^2 - 9}{x-3}`}
 
@@ -160,7 +162,30 @@
 				{@html kd`\lim_{x \to 3} \frac{x^2 - 9}{x-3}=6`}
 			{/snippet}
 		</WE>
+
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{y \to 8} \frac{y^{2/3}-4}{y^{1/3}-2}`}
+
+			{#snippet solution()}
+				<blockquote>
+					{@html ki`\large\frac{y^{2/3}-4}{y^{1/3}-2}`} is not defined at {@html ki`x=8`}. Cancel
+					any common factors in the numerator and denominator.
+				</blockquote>
+				{@html kd`
+					\frac{y^{2/3}-4}{y^{1/3}-2}= \frac{\cancel{(y^{1/3}-2)}(y^{1/3}+2)}{\cancel{(y^{1/3}-2)}}=y^{1/3}+2\qquad(\text{for }x\ne 8)\\[10px]
+					\displaystyle \lim_{y \to 8} \frac{y^{2/3}-4}{y^{1/3}-2}=\displaystyle \lim_{y \to 8} y^{1/3}+2=(8)^{1/3}+2=4
+					`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{y \to 8} \frac{y^{2/3}-4}{y^{1/3}-2}=4`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 		<WE {levels}>
 			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
 
@@ -254,7 +279,7 @@
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to -2} \left(\frac{x^2-x-6}{x^2+7x+10}\right)`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^2+7x+10}`}
 
 			{#snippet solution()}
 				<blockquote>
@@ -273,6 +298,7 @@
 				{@html kd`\large\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^2+7x+10}=-\frac{5}{3}`}
 			{/snippet}
 		</WE>
+
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
@@ -298,6 +324,51 @@
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 2} \left(\frac{1}{x-2}-\frac{3}{x^2-x-2}\right)`}
+
+			{#snippet solution()}
+				{@html kd`
+				\begin{aligned} 
+					\frac{1}{x-2}-\frac{3}{x^2-x-2}&=\frac{1}{x-2}-\frac{3}{(x-2)(x+1)} \\[10px]
+					&=\frac{(x+1)-3}{(x-2)(x+1)}\\[10px]
+					&=\frac{\cancel{x-2}}{\cancel{(x-2)}(x+1)}\\[10px]
+					&=\frac{1}{x+1} \qquad(\text{for } x\ne 2)
+					\\[15px]					
+					\Rightarrow\displaystyle \lim_{x \to 2} \left(\frac{1}{x-2}-\frac{3}{x^2-x-2}\right) &=\displaystyle \lim_{x \to 2} \frac{1}{x+1} =\frac{1}{(2)+1}=\frac{1}{3}
+				\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{x \to 2} \left(\frac{1}{x-2}-\frac{3}{x^2-x-2}\right)=\frac{1}{3}`}
+			{/snippet}
+		</WE>
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{\sqrt{2+x^2}-\sqrt{2-x^2}}{x^2}`}
+
+			{#snippet solution()}
+				{@html kd`
+				\begin{aligned} 
+					\frac{\sqrt{2+x^2}-\sqrt{2-x^2}}{x^2}&=\frac{\sqrt{2+x^2}-\sqrt{2-x^2}}{x^2}\cdot\frac{\sqrt{2+x^2}+\sqrt{2-x^2}}{\sqrt{2+x^2}+\sqrt{2-x^2}} \\[10px]
+				 &= \frac{\left(2+x^2\right)-\left(2-x^2\right)}{x^2\left(\sqrt{2+x^2}+\sqrt{2-x^2}\right)}  \\[10px]
+				 &= \frac{2\cancel{x^2}}{\cancel{x^2}\left(\sqrt{2+x^2}+\sqrt{2-x^2}\right)} \qquad(\textsf{for }x\ne 0) \\[10px]
+				  &= \frac{2}{\left(\sqrt{2+x^2}+\sqrt{2-x^2}\right)} \qquad(\textsf{for }x\ne 0)
+					\\[15px]					
+					\Rightarrow\displaystyle \lim_{x \to 0} \frac{\sqrt{2+x^2}-\sqrt{2-x^2}}{x^2}&=\displaystyle \lim_{x \to 0} \frac{2}{\left(\sqrt{2+x^2}+\sqrt{2-x^2}\right)} \\[10px]
+					&=\frac{2}{\sqrt{2+(0)^2}+\sqrt{2-(0)^2}} \\[10px]
+					&= \frac{1}{\sqrt{2}}
+				\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html kd`\displaystyle \lim_{x \to 0} \frac{\sqrt{2+x^2}-\sqrt{2-x^2}}{x^2}=\frac{1}{\sqrt{2}}`}
+			{/snippet}
+		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 	</main>
