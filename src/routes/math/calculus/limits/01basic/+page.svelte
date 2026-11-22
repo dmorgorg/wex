@@ -167,19 +167,24 @@
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`\lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}=0`}
+				{@html kd`\lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}=0`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		<WE {levels}>
-			Evaluate {@html ki`\large\displaystyle \lim_{x \to -2} \frac{x^2 + x - 2}{x+2}`}
+			Evaluate {@html ki`\large\displaystyle \lim_{x \to -2} \left(\frac{x^2-x-6}{x^2+7x+10}\right)`}
 
 			{#snippet solution()}
-				?
+				{@html kd`
+				\begin{aligned} 
+					\frac{x^2-x-6}{x^2+7x+10} &=\frac{\cancel{(x+2)}(x-3)}{\cancel{(x+2)}(x+5)}=\frac{x-3}{x+5}\qquad(\text{for }x\ne -2)\\[5px]					
+					\Rightarrow\lim_{x \to -2} \frac{x^2-x-6}{x^2+7x+10} &=\lim_{x \to -2} \frac{x-3}{x+5}=\frac{(-2)-3}{(-2)+5} =-\frac{5}{3}
+				\end{aligned}
+				`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html kd`\large\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^2+7x+10}=-\frac{5}{3}`}
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
