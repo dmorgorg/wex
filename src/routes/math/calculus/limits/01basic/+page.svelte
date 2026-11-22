@@ -85,14 +85,6 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
 
 			{#snippet solution()}
-				<blockquote>
-					{@html ki`\large\frac{x^2 - 9}{x-3}`} is of the form {@html ki`\large\frac{0}{0}`}
-					at {@html ki`x=3`}
-					so straightforward evaluation of the function at {@html ki`x=3`} is not an option. But {@html ki`x-3`}
-					is a factor of {@html ki`x^2-9`} so we can proceed with algebra. Remember that we are looking
-					for the behaviour of {@html ki`\large\frac{x^2 - 9}{x-3}`} arbitrarily close (but not at) {@html ki`x=3`}
-					so division by {@html ki`x-3`} is not division by {@html ki`0`} and still a valid operation.
-				</blockquote>
 				{@html kd`
 				\begin{aligned} 
 				\frac{\sqrt{x+4} - 2}{x} &= \frac{\sqrt{x+4} - 2}{x} \cdot \frac{\sqrt{x+4} + 2}{\sqrt{x+4} + 2} \\[5px]
@@ -145,12 +137,11 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				?
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				?
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -158,12 +149,11 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				?
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				?
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -171,12 +161,11 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to -2} \frac{x^2 + x - 2}{x+2}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				?
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				?
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -184,12 +173,11 @@
 			Evaluate {@html ki`\large\displaystyle \lim_{x \to 1} \frac{x^4 - 1}{x^2 - 1}`}
 
 			{#snippet solution()}
-				Substitute {@html ki`x = 3`} directly, because {@html ki`2x + 1`} is continuous:
-				{@html kd`2(3) + 1 = 7`}
+				?
 			{/snippet}
 
 			{#snippet answer()}
-				{@html ki`7`}
+				?
 			{/snippet}
 		</WE>
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
