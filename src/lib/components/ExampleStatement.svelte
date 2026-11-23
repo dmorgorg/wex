@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="children example-statement"
+	class="kids example-statement"
 	class:_1-Example={level === 1}
 	class:_2-Example={level === 2}
 	class:_3-Example={level === 3}
@@ -20,7 +20,7 @@
 </div>
 
 <style>
-	.children::before {
+	.kids::before {
 		counter-increment: problem-counter;
 		font-weight: bold;
 		margin-right: 0.5em;

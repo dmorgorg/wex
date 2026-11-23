@@ -1,5 +1,6 @@
 <script>
 	import Header from '#lib/components/Header.svelte'
+	import Definition from '#lib/components/Definition.svelte'
 	import WE from '#lib/components/WE.svelte'
 	import { ki, kd } from '#lib/utilities.js'
 	const levels = 2
@@ -15,13 +16,17 @@
 	<main>
 		<h4>Definitions and Theorems:</h4>
 
-		<blockquote class="definition">
-			<h4>(An Informal) Definition of a Limit</h4>
-			If {@html ki`f`} is defined for all {@html ki`x`} near {@html ki`a`}, and if we can make {@html ki`f(x)`}
-			as close to {@html ki`L`} as we want by choosing {@html ki`x`} sufficiently close to {@html ki`a`},
-			we say that function {@html ki`f`} approaches the <strong>limit</strong>
-			{@html ki`L`} as {@html ki`x`} approaches {@html ki`a`}. We write {@html kd`\displaystyle \lim_{x \to a} f(x)=L \quad\textsf{or}\quad f(x) \to L\textsf{ as }x \to a`}
-		</blockquote>
+		<Definition {levels}>
+			{#snippet defn()}
+				Limit (Informal)
+			{/snippet}
+			{#snippet body()}
+				If {@html ki`f`} is defined for all {@html ki`x`} near {@html ki`a`}, and if we can make {@html ki`f(x)`}
+				as close to {@html ki`L`} as we want by choosing {@html ki`x`} sufficiently close to {@html ki`a`},
+				we say that function {@html ki`f`} approaches the <strong>limit</strong>
+				{@html ki`L`} as {@html ki`x`} approaches {@html ki`a`}. We write {@html kd`\displaystyle \lim_{x \to a} f(x)=L \qquad\textsf{or}\qquad f(x) \to L\textsf{ as }x \to a`}
+			{/snippet}
+		</Definition>
 
 		<blockquote class="definition">
 			<h4>Definition of a Limit</h4>

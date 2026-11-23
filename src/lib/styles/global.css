@@ -221,16 +221,10 @@ blockquote.definition {
   font-size: 95%;
   line-height: 1.1;
 }
-blockquote.definition > .katex-display {
+blockquote.definition .body .katex-display {
   padding-block: 0;
-  margin-block: 0.5em;
-}
-blockquote h4 {
-  font-family: alkesLightItalic;
-  font-size: 1rem;
-  margin-block: 0rem;
-  padding-block: 0rem;
-  text-decoration: underline;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 blockquote .katex {
   font-size: 1em !important;

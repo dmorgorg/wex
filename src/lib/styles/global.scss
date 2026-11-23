@@ -244,22 +244,11 @@ blockquote {
 		font-size: 95%;
 		line-height: 1.1;
 
-		> .katex-display {
-			// border: 1px solid green;
+		.body .katex-display {
 			padding-block: 0;
-			margin-block: 0.5em;
+			margin-top: 0.25rem;
+			margin-bottom: 0.5rem;
 		}
-	}
-
-	h4 {
-		font-family: alkesLightItalic;
-		font-size: 1rem;
-		// font-weight: bold;
-		// color: red;
-
-		margin-block: 0rem;
-		padding-block: 0rem;
-		text-decoration: underline;
 	}
 
 	.katex {
