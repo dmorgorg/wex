@@ -19,47 +19,55 @@
 						<ol>
 							<li class="topic">
 								Limits
-								<ol>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/01basic">Basic&nbsp;Limits</a>
+								<ul>
+									<li><a href="/math/calculus/limits/defs">Definitions and Theorems.</a></li>
+									<li>
+										Worked Examples:
+										<ol>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/01basic">Basic&nbsp;Limits</a>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/02infinity">Limits&nbsp;at&nbsp;Infinity</a>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/03trigonometric">Trigonometric&nbsp;Limits</a
+												>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/04explog">
+													Exponential&nbsp;and&nbsp;Logarithmic&nbsp;Limits
+												</a>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/05Lhopital"> L'Hôpital's&nbsp;Rule </a>
+											</li>
+											<li class="inline sub-topic">
+												<!-- the code is for non-breaking hyphen -->
+												<a href="/math/calculus/limits/06oneSided">One&#8209;sided&nbsp;Limits</a>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/07piecewise">Piecewise&nbsp;Functions</a>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/08parameters"
+													>Limits&nbsp;with&nbsp;Parameters</a
+												>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/09squeeze"
+													>Squeeze&nbsp;Theorem&nbsp;and&nbsp;Special&nbsp;Limits</a
+												>
+											</li>
+											<li class="inline sub-topic">
+												<a href="/math/calculus/limits/10multi">Multivariable&nbsp;Limits</a>
+											</li>
+										</ol>
 									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/02infinity">Limits&nbsp;at&nbsp;Infinity</a>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/03trigonometric">Trigonometric&nbsp;Limits</a>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/04explog">
-											Exponential&nbsp;and&nbsp;Logarithmic&nbsp;Limits
-										</a>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/05Lhopital"> L'Hôpital's&nbsp;Rule </a>
-									</li>
-									<li class="inline sub-topic">
-										<!-- the code is for non-breaking hyphen -->
-										<a href="/math/calculus/limits/06oneSided">One&#8209;sided&nbsp;Limits</a>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/07piecewise">Piecewise&nbsp;Functions</a>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/08parameters">Limits&nbsp;with&nbsp;Parameters</a
-										>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/09squeeze"
-											>Squeeze&nbsp;Theorem&nbsp;and&nbsp;Special&nbsp;Limits</a
-										>
-									</li>
-									<li class="inline sub-topic">
-										<a href="/math/calculus/limits/10multi">Multivariable&nbsp;Limits</a>
-									</li>
-								</ol>
+								</ul>
 							</li>
-							<li class="topic">Differentiation</li>
-							<li class="topic">Integration</li>
+							<li class="topic"><strike>Differentiation</strike></li>
+							<li class="topic"><strike>Integration</strike></li>
 						</ol>
 					</li>
 				</ul>
@@ -76,9 +84,23 @@
 			counter-reset: outer-list; /* limits, differentiation,... */
 			padding-left: 2.5rem;
 
-			ol {
-				counter-reset: inline-list;
-				padding-left: 0rem;
+			ul {
+				// border: 1px solid red;
+
+				li {
+					// border: 1px solid green;
+					padding-left: 0rem;
+					margin-left: -1rem;
+					// background: pink;
+					li {
+						margin-left: 1rem;
+						display: inline;
+					}
+				}
+				ol {
+					counter-reset: inline-list;
+					padding-left: 0rem;
+				}
 			}
 
 			& > li {

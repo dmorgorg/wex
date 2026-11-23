@@ -226,12 +226,41 @@ div.example-statement {
 	}
 }
 
+.math blockquote {
+	border: 2px solid var(--math-primary);
+	margin-inline: 0em;
+}
+
 blockquote {
-	border: 1px solid var(--math-primary);
-	// background-color: var(--math-white);
+	// border: 1px solid var(--math-primary);
+	background: white;
+	font-family: jost;
 	margin-top: 1.5em;
 	margin-bottom: 0.5em;
 	padding: 0.75em;
+
+	&.definition {
+		border-width: 3px;
+		font-size: 95%;
+		line-height: 1.1;
+
+		> .katex-display {
+			// border: 1px solid green;
+			padding-block: 0;
+			margin-block: 0.5em;
+		}
+	}
+
+	h4 {
+		font-family: alkesLightItalic;
+		font-size: 1rem;
+		// font-weight: bold;
+		// color: red;
+
+		margin-block: 0rem;
+		padding-block: 0rem;
+		text-decoration: underline;
+	}
 
 	.katex {
 		// color: red;
