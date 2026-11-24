@@ -23,8 +23,8 @@
 
 			{#snippet solution()}
 				<blockquote>
-					Since {@html ki`3x^2 - 5x + 2`} is continuous everywhere, we can simply evaluate the expression
-					at {@html ki`x=2`}
+					Since {@html ki`3x^2 - 5x + 2`} is defined for all {@html ki`x`}, we can simply evaluate
+					the expression at {@html ki`x=2`}
 				</blockquote>
 				{@html kd`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)=3(2)^2 -5(2)+2 = 4`}
 			{/snippet}

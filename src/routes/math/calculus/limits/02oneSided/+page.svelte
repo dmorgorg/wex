@@ -21,14 +21,18 @@
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)`}
+			Given that {@html ki`\displaystyle f(x)=\frac{|x-3|}{x^2-9}`}, determine {@html ki`\lim_{x\to 3^-} f(x), \lim_{x\to 3^+} f(x)`}
+			and {@html ki`\lim_{x\to 3} f(x)`}
 
 			{#snippet solution()}
-				<blockquote>
-					Since {@html ki`3x^2 - 5x + 2`} is continuous everywhere, we can simply evaluate the expression
-					at {@html ki`x=2`}
-				</blockquote>
-				{@html kd`\displaystyle \lim_{x \to 2} (3x^2 - 5x + 2)=3(2)^2 -5(2)+2 = 4`}
+				&nbsp;
+				{@html kd`
+				\begin{aligned}
+					\displaystyle\lim_{x\to 3^-} f(x) &=\displaystyle\lim_{x\to 3^-} \frac{(3-x)}{(x-3)(x+3)}=\displaystyle\lim_{x\to 3^-} \frac{-\cancel{(x-3)}}{\cancel{(x-3)}(x+3)}=-\frac{1}{6}\\[15pt]
+					\displaystyle\lim_{x\to 3^+} f(x) &=\displaystyle\lim_{x\to 3^+} \frac{(x-3)}{(x-3)(x+3)}=\displaystyle\lim_{x\to 3^+} \frac{\cancel{(x-3)}}{\cancel{(x-3)}(x+3)}=\frac{1}{6}\\[15pt]
+				\end{aligned}				
+			`}
+				{@html kd`\lim_{x\to 3} f(x) \textsf{ does not exist (DNE), since} \lim_{x\to 3^-} f(x) \ne \lim_{x\to 3^+} f(x) `}
 			{/snippet}
 
 			{#snippet answer()}

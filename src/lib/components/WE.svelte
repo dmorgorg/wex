@@ -55,8 +55,7 @@
 		color: black;
 		display: flex;
 		flex-direction: column;
-		font-family: glacialIndifferenceReg;
-		font-family: texGyre;
+
 		font-family: jost;
 		/* font-family: quicksand; */
 		font-size: 90%;
