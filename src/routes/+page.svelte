@@ -28,6 +28,10 @@
 												<a href="/math/calculus/limits/01basic">Basic&nbsp;Limits</a>
 											</li>
 											<li class="inline sub-topic">
+												<!-- the code is for non-breaking hyphen -->
+												<a href="/math/calculus/limits/02oneSided">One&#8209;sided&nbsp;Limits</a>
+											</li>
+											<li class="inline sub-topic">
 												<a href="/math/calculus/limits/02infinity">Limits&nbsp;at&nbsp;Infinity</a>
 											</li>
 											<li class="inline sub-topic">
@@ -42,10 +46,7 @@
 											<li class="inline sub-topic">
 												<a href="/math/calculus/limits/05Lhopital"> L'Hôpital's&nbsp;Rule </a>
 											</li>
-											<li class="inline sub-topic">
-												<!-- the code is for non-breaking hyphen -->
-												<a href="/math/calculus/limits/06oneSided">One&#8209;sided&nbsp;Limits</a>
-											</li>
+
 											<li class="inline sub-topic">
 												<a href="/math/calculus/limits/07piecewise">Piecewise&nbsp;Functions</a>
 											</li>
