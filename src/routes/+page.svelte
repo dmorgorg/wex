@@ -32,7 +32,7 @@
 												<a href="/math/calculus/limits/02oneSided">One&#8209;sided&nbsp;Limits</a>
 											</li>
 											<li class="inline sub-topic">
-												<a href="/math/calculus/limits/02infinity">Limits&nbsp;at&nbsp;Infinity</a>
+												<a href="/math/calculus/limits/03infinity">Limits&nbsp;at&nbsp;Infinity</a>
 											</li>
 											<li class="inline sub-topic">
 												<a href="/math/calculus/limits/03trigonometric">Trigonometric&nbsp;Limits</a

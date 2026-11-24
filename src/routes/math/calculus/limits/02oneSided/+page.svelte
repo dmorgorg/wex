@@ -40,7 +40,7 @@
 
 <style>
 	main {
-		counter-reset: section-counter 1 subsection-counter 1 subsubsection-counter 0 problem-counter 0;
+		counter-reset: section-counter 1 subsection-counter 2 subsubsection-counter 0 problem-counter 0;
 		a {
 			color: inherit;
 			font-size: 80%;

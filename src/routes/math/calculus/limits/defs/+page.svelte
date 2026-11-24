@@ -66,6 +66,22 @@
 			{/snippet}
 		</Definition>
 
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<Definition {levels}>
+			{#snippet defn()}
+				A Polynomial
+			{/snippet}
+			{#snippet body()}
+				A <strong>polynomial</strong> in {@html ki`x`} is a function of the form
+				{@html kd`P(x) = a_n x^n + a_{n-1} x^{n-1}+ a_{n-2} x^{n-2}+\ldots+a_1 x+a_0`}
+				where {@html ki`a_n, a_{n-1}, a_{n-2},\ldots,a_1,a_0`} are constants and {@html ki`a_n\ne 0`}.
+				The number {@html ki`n`} is the <strong>degree</strong> of the polynomial {@html ki`P(x)`}.
+				A quotient {@html ki`P(x)/Q(x)`} of two polynomials is called a
+				<strong>rational function</strong>.
+			{/snippet}
+		</Definition>
+
 		<Theorem {levels}>
 			{#snippet statement()}
 				<span
@@ -86,6 +102,10 @@
 			{#snippet body()}
 				If {@html ki`\lim_{x\to a} f(x)=L,\,\lim_{x\to a} g(x)=M`} and {@html ki`k`} is a constant, then:
 				<ol>
+					<li>
+						{@html ki`\displaystyle\lim_{x\to a}x=a`} and {@html ki`\displaystyle\lim_{x\to a}c=c`},
+						where {@html ki`c`} is a constant.
+					</li>
 					<li>
 						<strong>Sum Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\left[f(x)+g(x)\right]=L+M`}
 					</li>
@@ -114,22 +134,6 @@
 				</ol>
 			{/snippet}
 		</Theorem>
-
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<Definition {levels}>
-			{#snippet defn()}
-				A Polynomial
-			{/snippet}
-			{#snippet body()}
-				A <strong>polynomial</strong> in {@html ki`x`} is a function of the form
-				{@html kd`P(x) = a_n x^n + a_{n-1} x^{n-1}+ a_{n-2} x^{n-2}+\ldots+a_1 x+a_0`}
-				where {@html ki`a_n, a_{n-1}, a_{n-2},\ldots,a_1,a_0`} are constants and {@html ki`a_n\ne 0`}.
-				The number {@html ki`n`} is the <strong>degree</strong> of the polynomial {@html ki`P(x)`}.
-				A quotient {@html ki`P(x)/Q(x)`} of two polynomials is called a
-				<strong>rational function</strong>.
-			{/snippet}
-		</Definition>
 	</main>
 </div>
 
