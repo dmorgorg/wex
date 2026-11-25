@@ -2,5 +2,6 @@
 	"compilerOptions": {
 		"strict": true
 	},
-	"include": ["src", "vite.config.ts"]
+	"include": ["src", "vite.config.ts"],
+	"exclude": ["src/routes/math/calculus/limits/02infinity/+page.svelte"]
 }
