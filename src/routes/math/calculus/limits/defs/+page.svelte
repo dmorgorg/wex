@@ -68,20 +68,6 @@
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-		<Definition {levels}>
-			{#snippet defn()}
-				A Polynomial
-			{/snippet}
-			{#snippet body()}
-				A <strong>polynomial</strong> in {@html ki`x`} is a function of the form
-				{@html kd`P(x) = a_n x^n + a_{n-1} x^{n-1}+ a_{n-2} x^{n-2}+\ldots+a_1 x+a_0`}
-				where {@html ki`a_n, a_{n-1}, a_{n-2},\ldots,a_1,a_0`} are constants and {@html ki`a_n\ne 0`}.
-				The number {@html ki`n`} is the <strong>degree</strong> of the polynomial {@html ki`P(x)`}.
-				A quotient {@html ki`P(x)/Q(x)`} of two polynomials is called a
-				<strong>rational function</strong>.
-			{/snippet}
-		</Definition>
-
 		<Theorem {levels}>
 			{#snippet statement()}
 				<span
@@ -132,6 +118,48 @@
 						{@html kd`L<M`}
 					</li>
 				</ol>
+			{/snippet}
+		</Theorem>
+
+		<Definition {levels}>
+			{#snippet defn()}
+				A Polynomial
+			{/snippet}
+			{#snippet body()}
+				A <strong>polynomial</strong> in {@html ki`x`} is a function of the form
+				{@html kd`P(x) = a_n x^n + a_{n-1} x^{n-1}+ a_{n-2} x^{n-2}+\ldots+a_1 x+a_0`}
+				where {@html ki`a_n, a_{n-1}, a_{n-2},\ldots,a_1,a_0`} are constants and {@html ki`a_n\ne 0`}.
+				The number {@html ki`n`} is the <strong>degree</strong> of the polynomial {@html ki`P(x)`}.
+				A quotient {@html ki`P(x)/Q(x)`} of two polynomials is called a
+				<strong>rational function</strong>.
+			{/snippet}
+		</Definition>
+
+		<Theorem {levels}>
+			{#snippet statement()}
+				Limits of Polynomials and Rational Functions
+			{/snippet}
+			{#snippet body()}
+				<ol class="">
+					<li>
+						If {@html ki`P(x)`} is a polynomial and {@html ki`a`} any real number, then {@html ki`\displaystyle\lim_{x\to a}P(x)=P(a)`}
+					</li>
+					<li>
+						If {@html ki`P(x)`} and {@html ki`Q(x)`} are polynomials and {@html ki`Q(a)\ne 0`}, then {@html ki`\displaystyle\lim_{x\to a}\frac{P(x)}{Q(x)}=\frac{P(a)}{Q(a)}`}
+					</li>
+				</ol>
+			{/snippet}
+		</Theorem>
+
+		<Theorem {levels}>
+			{#snippet statement()}
+				The Squeeze Theorem
+			{/snippet}
+			{#snippet body()}
+				If {@html ki`f(x)\le g(x)\le h(x)`} for all {@html ki`x`} in some open interval interval containing
+				{@html ki`a`}, except possibly at {@html ki`a`} itself, and if
+				{@html kd`\lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L`} then {@html kd`\lim_{x\to a}g(x)=L`}
+				(Similar results hold for one-sided limits.)
 			{/snippet}
 		</Theorem>
 	</main>
