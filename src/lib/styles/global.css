@@ -59,6 +59,13 @@ body {
 .container main::-webkit-scrollbar {
   width: 16px;
 }
+.container main a.defs {
+  color: inherit;
+  font-size: 80%;
+  text-align: right;
+  margin-top: -0.75rem;
+  float: right;
+}
 .container.home main {
   background: var(--home-white);
 }

@@ -162,6 +162,64 @@
 				(Similar results hold for one-sided limits.)
 			{/snippet}
 		</Theorem>
+
+		<Definition levels={0}>
+			{#snippet defn()}
+				Limits at Infinity (An Informal Definition)
+			{/snippet}
+			{#snippet body()}
+				If {@html ki`f`} is defined on {@html ki`(a,\infty)`} and we can make {@html ki`f`} as close
+				to {@html ki`L`} as we want by choosing a sufficiently large , we say that function {@html ki`f`}
+				approaches (or tends to) the <strong>limit</strong>
+				{@html ki`L`} as {@html ki`x`} approaches (or tends to) infinity. We write {@html kd`\lim_{x \to \infty} f(x)=L `}
+				Similarly, if {@html ki`f`} is defined on {@html ki`(-\infty,b)`} and we can make {@html ki`f`}
+				as close to {@html ki`M`} as we want by choosing a negative {@html ki`x`} sufficiently large
+				in absolute value of {@html ki`x`}, we say that function {@html ki`f`}
+				approaches (or tends to) the <strong>limit</strong>
+				{@html ki`L`} as {@html ki`x`} approaches (or tends to) negative infinity. We write {@html kd`\lim_{x \to -\infty} f(x)=M `}
+			{/snippet}
+		</Definition>
+
+		<Definition {levels}>
+			{#snippet defn()}
+				Infinite Limits
+			{/snippet}
+			{#snippet body()}
+				Let {@html ki`f`} be a function defined at every number in some open interval containing {@html ki`f`},
+				(except possibly at {@html ki`a`} itself). As {@html ki`x`} approaches {@html ki`a`}, {@html ki`f(x)`}
+				<strong>tends to infinity</strong>
+				if, for any {@html ki`N>0`}, there exists a {@html ki`\delta>0`}
+				such that {@html ki`0<|x-a|<\delta \Rightarrow f(x)>N`}. <br />We write {@html ki`\displaystyle\lim_{x\to a}F(x)=+\infty`}.<br
+				/><br />
+				Let {@html ki`f`} be a function defined at every number in some open interval containing {@html ki`f`},
+				(except possibly at {@html ki`a`} itself). As {@html ki`x`} approaches {@html ki`a`}, {@html ki`f(x)`}
+				<strong>tends to negative infinity</strong>
+				if, for any {@html ki`N<0`}, there exists a {@html ki`\delta>0`}
+				such that {@html ki`0<|x-a|<\delta \Rightarrow f(x)<N`}. <br />We write {@html ki`\displaystyle\lim_{x\to a}F(x)=-\infty`}.<br
+				/>
+			{/snippet}
+		</Definition>
+
+		<Theorem {levels}>
+			{#snippet statement()}
+				{@html ki`\textsf{For any positive integer }r`}
+			{/snippet}
+			{#snippet body()}
+				<ol>
+					<li>
+						{@html ki`\displaystyle\lim_{x\to 0^+} \frac{1}{x^r}=+\infty`}
+					</li>
+					<li>
+						{@html ki`\displaystyle\lim_{x\to 0^-} \frac{1}{x^r}=
+						\begin{cases}
+							-\infty &\textsf{if } r \textsf{ is odd} \\
+							+\infty &\textsf{if } r \textsf{ is even}
+						\end{cases}
+						`}
+					</li>
+				</ol>
+			{/snippet}
+		</Theorem>
 	</main>
 </div>
 

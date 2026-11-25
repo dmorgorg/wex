@@ -69,6 +69,14 @@ body {
 		&::-webkit-scrollbar {
 			width: 16px;
 		}
+
+		a.defs {
+			color: inherit;
+			font-size: 80%;
+			text-align: right;
+			margin-top: -0.75rem;
+			float: right;
+		}
 	}
 
 	&.home main {

@@ -13,35 +13,42 @@
 <div class="container {topMatter.theme}">
 	<Header {topMatter} />
 	<main>
-		<h4>1.2 Limits at Infinity</h4>
+		<div>
+			<a href="/math/calculus/limits/defs" class="defs">Limits: Definitions and Theorems</a>
+		</div>
+		<h4>1.3 Limits at Infinity and Infinite Limits</h4>
 
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<!-- <WE {levels}>
+			Use the definition of an infinite limit to show that {@html ki`\displaystyle \lim_{x \to 0^+} \frac{1}{x}=+\infty`}
+
+			{#snippet solution()}
+				Divide the by the largest powers of {@html ki`x`} in the numerator and the denominator:
+				{@html kd`\lim_{x \to \infty} \frac{5x^2 + 2x - 1}{3x^2 - 7}=\lim_{x \to \infty} \frac{5 + 2/x - 1/x^2}{3 - 7/x^2}= \frac{5}{3}`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{5x^2 + 2x - 1}{3x^2 - 7}=\frac{5}{3}`}
+			{/snippet}
+		</WE> -->
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
 			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \frac{5x^2 + 2x - 1}{3x^2 - 7}`}
 
 			{#snippet solution()}
-				?
+				As the numerator and denominator have the same largest powers of {@html ki`x`}, divide by
+				the highest power, {@html ki`x^2`} :
+				{@html kd`\lim_{x \to \infty} \frac{5x^2 + 2x - 1}{3x^2 - 7}=\lim_{x \to \infty} \frac{5 + 2/x - 1/x^2}{3 - 7/x^2}= \frac{5 + 0 - 0}{3 - 0}= \frac{5}{3}`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{5x^2 + 2x - 1}{3x^2 - 7}=\frac{5}{3}`}
 			{/snippet}
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{4x^3 - x}{2x^3 + 5x^2}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
@@ -49,25 +56,60 @@
 			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \frac{7x^4 - 2x}{x^5 + 3}`}
 
 			{#snippet solution()}
-				?
+				We can divide the by the largest power of {@html ki`x`} again:
+				{@html kd`\lim_{x \to \infty} \frac{7x^4 - 2x}{x^5 + 3}=\lim_{x \to \infty} \frac{7/x - 2/x^4}{1 + 3/x^5}= \frac{0 - 0}{1 + 0}= 0`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{7x^4 - 2x}{x^5 + 3}=0`}
 			{/snippet}
 		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{2x^2 + 3x}{x^2 - 1}`}
+			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \sqrt{x^2+x}`}
 
 			{#snippet solution()}
-				?
+				For large {@html ki`x`}, it appears that {@html ki`\sqrt{x^2+x}`} will behave like {@html ki`x`}.
+				Let's show that.
+				{@html kd`
+				\begin{aligned}
+					\lim_{x \to \infty} \sqrt{x^2+x} &=\lim_{x \to \infty} x\sqrt{1+1/x} \\
+					& =\lim_{x \to \infty}x\cdot\lim_{x \to \infty}\sqrt{1+1/x} \\
+					&=+\infty\cdot 1\\ 
+					 &=+\infty
+				\end{aligned}
+			`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html ki`\displaystyle \lim_{x \to \infty} \sqrt{x^2+x}=|\infty`}
+			{/snippet}
+		</WE>
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{s \to \infty} \left(\sqrt{s^2+s}-s\right)`}
+
+			{#snippet solution()}
+				We see from the previous example that {@html ki`\displaystyle \lim_{s \to \infty} \sqrt{s^2+s}=+\infty`}.
+				Also, {@html ki`\displaystyle \lim_{s \to \infty} s=+\infty`}. So our limit is of the 'form' {@html ki`\infty-\infty`}.
+				Infinity is a concept, not a number, and we cannot perform arithmetic on it. We need to
+				rationalize the expression.
+				{@html kd`
+					\begin{aligned}
+						\lim_{s \to \infty} \sqrt{s^2+s}-s&=\lim_{s \to \infty} \sqrt{s^2+s}-s\cdot\frac{\sqrt{s^2+s}+s}{\sqrt{s^2+s}+s} \\
+						&=\lim_{s \to \infty} \frac{(s^2+s) - s^2}{\sqrt{s^2+s}+s}\\[5pt]
+						&=\lim_{s \to \infty}\frac{s}{s\left(\sqrt{1+1/s}+1\right)}\\[5pt]
+						&=\lim_{s \to \infty}\frac{\cancel{s}}{\cancel{s}\left(\sqrt{1+0}+1\right)}\\
+						&=\frac 12
+					\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{s \to \infty} \left(\sqrt{s^2+s}-s\right)=\frac{1}{2}`}
 			{/snippet}
 		</WE>
 
@@ -211,6 +253,11 @@
 
 <style>
 	main {
-		counter-reset: section-counter 1 subsection-counter 2 subsubsection-counter 0 problem-counter 0;
+		counter-reset: section-counter 1 subsection-counter 3 subsubsection-counter 0 problem-counter 0;
+	}
+	h4 {
+		display: block;
+		font-size: 120%;
+		padding-block: 1rem;
 	}
 </style>
