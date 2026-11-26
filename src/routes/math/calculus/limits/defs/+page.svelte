@@ -89,8 +89,8 @@
 				If {@html ki`\lim_{x\to a} f(x)=L,\,\lim_{x\to a} g(x)=M`} and {@html ki`k`} is a constant, then:
 				<ol>
 					<li>
-						{@html ki`\displaystyle\lim_{x\to a}x=a`} and {@html ki`\displaystyle\lim_{x\to a}c=c`},
-						where {@html ki`c`} is a constant.
+						{@html ki`\displaystyle\lim_{x\to a}x=a`} and {@html ki`\displaystyle\lim_{x\to a}k=k`}
+						.
 					</li>
 					<li>
 						<strong>Sum Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\left[f(x)+g(x)\right]=L+M`}
@@ -105,7 +105,7 @@
 						<strong>Constant Multiple Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\:k\!\cdot\! f(x)=kL`}
 					</li>
 					<li>
-						<strong>Quotient Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\:k\!\cdot\! \frac{f(x)}{g(x)}=\frac{L}{M},\quad \text{if }M\ne 0`}
+						<strong>Quotient Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\: \frac{f(x)}{g(x)}=\frac{L}{M},\quad \text{if }M\ne 0`}
 					</li>
 					<li>
 						<strong>Power Rule</strong>: If {@html ki`m`} is an integer and if {@html ki`n`} is a positive
@@ -116,6 +116,42 @@
 						<strong>Order Rule</strong>: If {@html ki`f(x)<g(x)`} on an interval containing {@html ki`a`}
 						in its interior, then
 						{@html kd`L<M`}
+					</li>
+				</ol>
+			{/snippet}
+		</Theorem>
+
+		<Theorem levels={0}>
+			{#snippet statement()}
+				<span>The previous theorem, rephrased:</span>
+			{/snippet}
+			{#snippet body()}
+				<ol>
+					<li value="2">
+						<strong>Sum Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\left[f(x)+g(x)\right]=\displaystyle\lim_{x\to a}f(x)+\displaystyle\lim_{x\to a}g(x)`}
+					</li>
+					<li>
+						<strong>Difference Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\left[f(x)-g(x)\right]=\lim_{x\to a}f(x)-\lim_{x\to a}g(x)`}
+					</li>
+					<li>
+						<strong>Product Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\:f(x)\!\cdot\! g(x)=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)`}
+					</li>
+					<li>
+						<strong>Constant Multiple Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\:k\!\cdot\! f(x)=k\cdot\lim_{x\to a}f(x)`}
+					</li>
+					<li>
+						<strong>Quotient Rule</strong>: {@html ki`\displaystyle\lim_{x\to a}\:\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)},\quad \text{if }\lim_{x\to a}g(x)\ne 0`}
+					</li>
+					<li>
+						<strong>Power Rule</strong>: If {@html ki`m`} is an integer and if {@html ki`n`} is a positive
+						integer, then {@html kd`\lim_{x\to a}\:\left[f(x)\right]^{m/n}=\left[\lim_{x\to a}f(x)\right]^{m/n}`}
+						provided that {@html ki`L>0`}
+						if {@html ki`n`} is even and {@html ki`L\ne 0`} if {@html ki`m< 0`}
+					</li>
+					<li>
+						<strong>Order Rule</strong>: If {@html ki`f(x)<g(x)`} on an interval containing {@html ki`a`}
+						in its interior, then
+						{@html kd`\lim_{x\to a}f(x)<\lim_{x\to a}g(x)`}
 					</li>
 				</ol>
 			{/snippet}

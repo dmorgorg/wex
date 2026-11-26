@@ -95,7 +95,7 @@
 			{#snippet solution()}
 				We see from the previous example that {@html ki`\displaystyle \lim_{s \to \infty} \sqrt{s^2+s}=+\infty`}.
 				Also, {@html ki`\displaystyle \lim_{s \to \infty} s=+\infty`}. So our limit is of the 'form' {@html ki`\infty-\infty`}.
-				Infinity is a concept, not a number, and we cannot perform arithmetic on it. We need to
+				Infinity is a concept, not a number, and we cannot perform arithmetic on it: We need to
 				rationalize the expression.
 				{@html kd`
 					\begin{aligned}
@@ -119,7 +119,89 @@
 			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}`}
 
 			{#snippet solution()}
-				?
+				{@html kd`
+					\begin{aligned}
+						\lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\lim_{x \to \infty} \frac{3x\sqrt{1 + 1/(9x^2)}}{x+2} \\[10pt]
+						&=\lim_{x \to \infty} \frac{3\sqrt{1 + 1/(9x^2)}}{1+2/x} \\[5pt]
+						&= \frac{3\sqrt{1 + 0}}{1+0} \\
+						&= 3 \\
+					
+					\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}=3`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}`}
+
+			{#snippet solution()}
+				{@html kd`
+					\begin{aligned}
+						\lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\frac{\sqrt{\displaystyle\lim_{x \to -\infty} 9x^2+1}}{\displaystyle\lim_{x \to -\infty} x+2} \\[15pt]
+						&=\frac{\sqrt{\displaystyle\lim_{x \to -\infty} 9x^2+1}}{-\sqrt{\left(\displaystyle\lim_{x \to -\infty} x+2\right)^2}} \\[15pt]
+						&=-\sqrt{\displaystyle\lim_{x \to -\infty}\frac{9x^2+1}{(x+2)^2}} \\[15pt]
+						&=-\sqrt{\displaystyle\lim_{x \to -\infty}\frac{9x^2+1}{x^2+4x+4}} \\[15pt]
+						&=-\sqrt{\displaystyle\lim_{x \to -\infty}\frac{9+1/x^2}{1+4/x+4/x^2}} \\[15pt]
+						&=-\sqrt{\frac{9+0}{1+0+0}} \\[15pt]
+						&=-3
+						
+						
+					
+					
+					\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}=-3`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{2x-1}{\sqrt{3x^2+4x+5}}`}
+
+			{#snippet solution()}
+				{@html kd`
+			\begin{aligned}
+			 \lim_{x \to -\infty} \frac{2x-1}{\sqrt{3x^2+4x+5}} &=  \lim_{x \to -\infty} \frac{2x-1}{\sqrt{3x^2+4x+5}} \\[10pt]
+			 &=  \lim_{x \to -\infty} \frac{2x-1}{|x|\sqrt{3+4/x+5/x^2}} \\[10pt]
+			 &=  \lim_{x \to -\infty} \frac{2x-1}{-x\sqrt{3+4/x+5/x^2}} \\[10pt]
+			 &=  \lim_{x \to -\infty} \frac{2-1/x}{-\sqrt{3+4/x+5/x^2}} \\[10pt]
+			 &=  \frac{2-0}{-\sqrt{3+0+0}} \\[10pt]
+			 &=  \frac{-2}{\sqrt{3}}
+			\end{aligned} 
+			`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to -\infty} \frac{2x-1}{\sqrt{3x^2+4x+5}}= \frac{-2}{\sqrt{3}}`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 3^+} \frac{x^2+2x+3}{x^2-2x-3}`}
+
+			{#snippet solution()}
+				{@html kd`
+					\begin{aligned}
+					\lim_{x \to 3^+} \frac{x^2+2x+3}{x^2-2x-3}&= \frac{\lim_{x \to 3^+}x^2+2x+3}{\lim_{x \to 3^+}x^2-2x-3}=\frac{18}{0}
+					\end{aligned}
+					
+				`}
+				So, the expression tends to either {@html ki`-\infty`} or to {@html ki`+\infty`}, depending
+				upon whether the denominator approaches {@html ki`0`} from left side (negative values) or the
+				right side (positive values).
 			{/snippet}
 
 			{#snippet answer()}
@@ -129,7 +211,7 @@
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-		<WE {levels}>
+		<!-- <WE {levels}>
 			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}`}
 
 			{#snippet solution()}
@@ -139,111 +221,9 @@
 			{#snippet answer()}
 				?
 			{/snippet}
-		</WE>
+		</WE> -->
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \left(\sqrt{x^2 + x} - x\right)`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{y \to 8} \frac{y^{2/3}-4}{y^{1/3}-2}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{\sqrt{x+4} - 2}{x}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 1} \frac{x^3 - 1}{x-1}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 4} \frac{x-4}{\sqrt{x} - 2}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 0} \frac{(x+1)^2 - 1}{x}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to 2} \frac{x^2 - 4x + 4}{x-2}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
-
-		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-
-		<WE {levels}>
-			Evaluate {@html ki`\displaystyle \lim_{x \to -2} \frac{x^2-x-6}{x^2+7x+10}`}
-
-			{#snippet solution()}
-				?
-			{/snippet}
-
-			{#snippet answer()}
-				?
-			{/snippet}
-		</WE>
 
 		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
