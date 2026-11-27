@@ -121,7 +121,8 @@
 			{#snippet solution()}
 				{@html kd`
 					\begin{aligned}
-						\lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\lim_{x \to \infty} \frac{3x\sqrt{1 + 1/(9x^2)}}{x+2} \\[10pt]
+						\lim_{x \to \infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\lim_{x \to \infty} \frac{3|x|\sqrt{1 + 1/(9x^2)}}{x+2} \\[10pt]
+						&=\lim_{x \to \infty} \frac{3x\sqrt{1 + 1/(9x^2)}}{x+2} \\[10pt]
 						&=\lim_{x \to \infty} \frac{3\sqrt{1 + 1/(9x^2)}}{1+2/x} \\[5pt]
 						&= \frac{3\sqrt{1 + 0}}{1+0} \\
 						&= 3 \\
@@ -142,6 +143,17 @@
 			Evaluate {@html ki`\displaystyle \lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}`}
 
 			{#snippet solution()}
+				{@html kd`
+					\begin{aligned}
+						\lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\lim_{x \to -\infty} \frac{3|x|\sqrt{1 + 1/(9x^2)}}{x+2} \\[10pt]
+						&=\lim_{x \to -\infty} \frac{3(-x)\sqrt{1 + 1/(9x^2)}}{x+2} \quad(\textsf{because } x \textsf{ is negative close to }-\infty)\\[10pt]
+						&=\lim_{x \to -\infty} \frac{-3\sqrt{1 + 1/(9x^2)}}{1+2/x} \\[5pt]
+						&= \frac{-3\sqrt{1 + 0}}{1+0} \\
+						&= -3 \\
+					
+					\end{aligned}
+				`}
+				Alternatively, applying the limit theorems:
 				{@html kd`
 					\begin{aligned}
 						\lim_{x \to -\infty} \frac{\sqrt{9x^2 + 1}}{x+2}&=\frac{\sqrt{\displaystyle\lim_{x \to -\infty} 9x^2+1}}{\displaystyle\lim_{x \to -\infty} x+2} \\[15pt]
@@ -196,16 +208,105 @@
 				{@html kd`
 					\begin{aligned}
 					\lim_{x \to 3^+} \frac{x^2+2x+3}{x^2-2x-3}&= \frac{\lim_{x \to 3^+}x^2+2x+3}{\lim_{x \to 3^+}x^2-2x-3}=\frac{18}{0}
-					\end{aligned}
-					
+					\end{aligned}					
 				`}
 				So, the expression tends to either {@html ki`-\infty`} or to {@html ki`+\infty`}, depending
-				upon whether the denominator approaches {@html ki`0`} from left side (negative values) or the
-				right side (positive values).
+				upon through which values the denominator approaches {@html ki`0`}.
+				{@html kd`					
+					\lim_{x \to 3^+}x^2-2x-3=\lim_{x \to 3^+}(x-3)(x+1)>0\\[10pt]
+					\Rightarrow \lim_{x \to 3^+} \frac{x^2+2x+3}{x^2-2x-3} =+\infty									
+				`}
+				{@html kd`\left(\textsf{Note that } \lim_{x \to 3^-} \frac{x^2+2x+3}{x^2-2x-3}=-\infty\right)`}
 			{/snippet}
 
 			{#snippet answer()}
-				?
+				{@html kd`\lim_{x \to 3^+} \frac{x^2+2x+3}{x^2-2x-3}=+\infty`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 1} \frac{1}{1-x}`}
+
+			{#snippet solution()}
+				{@html kd`
+				\begin{aligned}
+					\lim_{x \to 1^-} \frac{1}{1-x}&=\frac{\lim_{x \to 1^-}1}{\lim_{x \to 1^+}1-x}=\frac{1}{\lim_{x \to 1^-}1-x}=\frac{1}{0^+}=+\infty \\[10pt]
+					\lim_{x \to 1^+} \frac{1}{1-x}&=\frac{\lim_{x \to 1^+}1}{\lim_{x \to 1^+}1-x}=\frac{1}{\lim_{x \to 1^+}1-x}=\frac{1}{0^-}=-\infty \\
+				\end{aligned}					
+				`}
+				{@html kd`\textsf{ The left and right limits are different so} \lim_{x \to 1} \frac{1}{1-x} \textsf{does not exist}.`}
+				{@html kd`\left(\textsf{Note that } \lim_{x \to 1} \frac{1}{(1-x)^2}=+\infty.\right)`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to 1} \frac{1}{1-x} \textsf{ does not exist}`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 2^-} \frac{2x}{\sqrt{4-x^2}}`}
+
+			{#snippet solution()}
+				{@html kd`
+				
+					\lim_{x \to 2^-} \frac{2x}{\sqrt{4-x^2}}=\frac{\lim_{x \to 2^-}2x}{\lim_{x \to 2^-}\sqrt{4-x^2}}=\frac{4}{0^+}=+\infty
+							
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to 2^-} \frac{2x}{\sqrt{4-x^2}}=+\infty`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to 1^+} \frac{\sqrt{x^2-x}}{x-x^2}`}
+
+			{#snippet solution()}
+				{@html kd`
+				 	\begin{aligned}
+						\lim_{x \to 1^+}\frac{\sqrt{x^2-x}}{x-x^2}&=\lim_{x \to 1^+}\frac{-\sqrt{x^2-x}}{x^2-x}\\[10pt]
+						&=\lim_{x \to 1^+}\frac{-\sqrt{x^2-x}}{\sqrt{x^2-x}\cdot \sqrt{x^2-x}}\\[10pt]
+						&=\lim_{x \to 1^+}\frac{-1}{\sqrt{x^2-x}}\\[10pt]
+						&=\lim_{x \to 1^+}\frac{-1}{\sqrt{x}\cdot\sqrt{x-1}}\\[10pt]
+						&=\lim_{x \to 1^+}\frac{-1}{1\cdot 0^+} = -\infty
+					\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to 1^+} \frac{\sqrt{x^2-x}}{x-x^2} = -\infty`}
+			{/snippet}
+		</WE>
+
+		<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+		<WE {levels}>
+			Evaluate {@html ki`\displaystyle \lim_{x \to \infty} \frac{x\sqrt{x+1}\left(1-\sqrt{2x+3}\right)}{7-6x+4x^2}
+			`}
+
+			{#snippet solution()}
+				{@html kd`
+				 	\begin{aligned}
+				 		\lim_{x \to \infty} \frac{x\sqrt{x+1}\left(1-\sqrt{2x+3}\right)}{7-6x+4x^2}&=
+						\lim_{x \to \infty} \frac{x\sqrt{x+1}-x\sqrt{x+1}\sqrt{2x+3}}{7-6x+4x^2}\\[15pt]
+						&=
+						\lim_{x \to \infty} \frac{\sqrt{1/x+1/x^2}-\sqrt{1+1/x}\cdot\sqrt{2+3/x}}{7/x^2-6/x+4}\\[15pt]
+						&= \frac{\sqrt{0+0}-\sqrt{1+0}\cdot\sqrt{2+0}}{0-0+4}\\[10pt]
+						&=-\frac{\sqrt{2}}{4}
+					\end{aligned}
+				`}
+			{/snippet}
+
+			{#snippet answer()}
+				{@html ki`\displaystyle \lim_{x \to \infty} \frac{x\sqrt{x+1}\left(1-\sqrt{2x+3}\right)}{7-6x+4x^2}=-\frac{\sqrt{2}}{4}
+			`}
 			{/snippet}
 		</WE>
 
